@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { enableModal, disableModal } from '../../actions/modal_actions';
+// import { enableModal, disableModal } from '../../actions/modal_actions';
 
 
 
-const Greeting = ({ currentUser, logout }) => {
-    console.log("currentUser in greeting", currentUser);
+const Greeting = ({ currentUser, logout, enableModal }) => {
     // const sessionLinks = () => (
     //     <nav className="login-signup">
     //         <span className="register_link">

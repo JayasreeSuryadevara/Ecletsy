@@ -4,8 +4,9 @@ import {
 } from '../actions/session_actions';
 
 export default (state = [], action) => {
+
     Object.freeze(state);
-    console.log("inside errors_reducer", action.errors );
+
     switch (action.type) {
         case RECEIVE_SESSION_ERRORS:
             return action.errors;
@@ -14,4 +15,5 @@ export default (state = [], action) => {
         default:
             return state;
     }
+
 };

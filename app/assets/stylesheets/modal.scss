@@ -13,57 +13,41 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.login-form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-.login-input {
-  margin-left: 20px;
-  height: 40px;
-}
-
-.login-form-box {
+.session-form-box{
   margin: 5px auto;
   border: 1px solid #888;
   width: 340px;
   height: 730px;
   padding: 15px;
   align-items: center;
+  font-weight: bold;
 
   h2 {
     margin-top: -1px;
     font-size: 26px;  
   }
 }
-.login-form-box label {
-  font-weight: bold;
-}
-.signup-form-box {
-  margin: 5px auto;
-  border: 1px solid #888;
-  width: 340px;
-  height: 730px;
-  padding: 15px;
-  align-items: center;
-
-  h2 {
-    margin-top: -1px;
-    font-size: 26px;  
-  }
-}
-.signup-form-box label {
-  font-weight: bold;
+.session-form-input{
+    display: block;
+    height: 40px;
+    width: 160px;
+    background-color: rgb(232, 240, 254);
+    font: 400 11px system-ui
 }
 .login_button_container {
   font-weight: bold;
   font-size: 15px;
 }
-
+.session-form-container {
+    display: flex;
+    align-items: stretch;
+    padding: 10px;
+}
 .login_button_submit {
   align-self: center;
-  background-color: black;
+  background-color: rgb(6, 7, 6);
   color: white;
+  font-size: medium;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -74,13 +58,14 @@
   align-self: center;
   background-color: black;
   color: white;
+  font-size: medium;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
   width: 100%;
 }
-.login-form 
+.session-form 
   input[type=text], input[type=password], input[type=email] {
     width: 100%;
     padding: 12px 20px;
@@ -89,15 +74,7 @@
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-.signup-form 
-  input[type=text], input[type=password], input[type=email] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
+
 .session-terms-and-conditions {
   p {
     font-family: inherit;

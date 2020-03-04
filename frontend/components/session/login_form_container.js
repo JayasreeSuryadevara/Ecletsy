@@ -1,22 +1,24 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { login } from '../../actions/session_actions';
-import LoginForm from './login_form';
-import { enableModal, disableModal } from '../../actions/modal_actions';
+import React from "react";
+import { connect } from "react-redux";
+import { login } from "../../actions/session_actions";
+import SessionForm from "./session_form";
+import { enableModal, disableModal } from "../../actions/modal_actions";
 
 const mapStateToProps = ({ errors }) => {
     return {
         errors: errors.session,
+        formType: "login",
         formTitle: "Sign in to continue",
+        buttonType: "Sign in",
     };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
     return {
-        loginUser: (user) => dispatch(login(user)),
-        enableModal: (<button onClick={() => dispatch(enableModal("login"))}>Sign In</button>),
+        action: (user) => dispatch(login(user)),
+        enableModal: (<button onClick={() => dispatch(enableModal("signup"))}>Sign up</button>),
         disableModal: () => dispatch(disableModal()),
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
+export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);
