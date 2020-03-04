@@ -8,3 +8,4 @@
 #  
 # Seed Data for a demo user
 user1=User.create!(username: 'Demo User',password: 'password',email:"demo_user@text.com")
+

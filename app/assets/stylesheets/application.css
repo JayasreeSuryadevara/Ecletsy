@@ -49,15 +49,19 @@ body {
 
 .header-link {
   color: #F1641E;
+  display: inline-block;
   font-size: xx-large;
-  font-style: italic;
-  height: 40px;
+  height: 60px;
   font-family: "Guardian-EgypTT",serif;
   padding: 10px; 
   text-decoration: none;
 }
-.logo_greeting {
+.header-top-bar {
   display: flex;
+  font-style: italic;
+  font-weight: normal;
+  height: 24px;
+  font-size: small;
   justify-content: space-between;
   font-family: "Guardian-EgypTT",serif;
   padding: 10px;

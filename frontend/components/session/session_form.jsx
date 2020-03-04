@@ -1,6 +1,5 @@
 import React from 'react';
 import { DEMO_USER } from '../../util/demo_user_util';
-import { enableModal, disableModal } from '../../actions/modal_actions'; 
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -10,10 +9,9 @@ class SessionForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
         this.handleDemo = this.handleDemo.bind(this);
-        this.demoUserButton = this.demoUserButton.bind(this);
+        this.demoUserOrCloseButton = this.demoUserOrCloseButton.bind(this);
         this.inputEmailnAddress = this.inputEmailnAddress.bind(this);
         this.registerForSignInForm = this.registerForSignInForm.bind(this);
-        this.renderCloseButton = this.renderCloseButton.bind(this);
 
     }
 
@@ -34,11 +32,16 @@ class SessionForm extends React.Component {
         });
     }
 
-    demoUserButton() {
-        if (this.props.formType !== "login") return null;
-        return (
-            <button className="demo_user_login" onClick={this.handleDemo}> Demo User </button>
-        );
+    demoUserOrCloseButton() {
+        if (this.props.formType === "login") {
+            return (
+                <button className="session-other-button" onClick={this.handleDemo}> Demo User </button>
+            );
+        } else {
+            return (
+                <button className="session-other-button" onClick={this.props.disableModal}> Close </button>
+            );
+        }
     }
 
     inputEmailnAddress() {
@@ -73,16 +76,6 @@ class SessionForm extends React.Component {
             );
         }
 
-    }
-
-    renderCloseButton() {
-        if ( this.props.formType === 'signup') {
-            return (
-                <span className="signup-close-button"  onClick={ this.props.disableModal }> 
-                    Close
-                </span>
-            );
-        }
     }
 
     renderErrors() {
@@ -130,8 +123,9 @@ class SessionForm extends React.Component {
                             <input type="submit"
                                 value={this.props.buttonType}
                                 className="login_button_submit" />
-                            {this.demoUserButton()}
-                            {this.renderCloseButton()}
+                            <span className="session_other_button">
+                                {this.demoUserOrCloseButton()}
+                            </span>
                         </div>
                     </div>
                     <div className="session-terms-and-conditions">

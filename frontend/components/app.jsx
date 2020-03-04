@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 
 import GreetingContainer from './greeting/greeting_container';
+import NavBarContainer from './navbar/navbar_container';
 import Modal from './modal/modal';
 import SignUpFormContainer from './session/signup_form_container';
 import LogInFormContainer from './session/login_form_container';
@@ -17,8 +18,13 @@ const App = () => (
     <div>
         <Modal />
         <header className="logo_greeting">
-            <Link to="/" className="header-link">Ecletsy</Link>
-            <GreetingContainer />
+            <div className="header-top-bar">
+                <Link to="/" className="header-link">Ecletsy</Link>
+                <GreetingContainer />
+            </div>
+            <div className="header-bottom-bar">
+                <NavBarContainer />  
+            </div>
         </header>
         <Switch>
             <AuthRoute exact path="/login" component={LogInFormContainer} />

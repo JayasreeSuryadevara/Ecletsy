@@ -1,0 +1,14 @@
+.nav-bar-menu-list {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    height: 30px;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    font-size: 15px;
+    border-bottom: 3px solid rgb(221, 225, 228);
+    width: 100%;
+}
+a:link {
+    color: rgb(44, 43, 43);
+    text-decoration: underline;
+}

@@ -22,16 +22,17 @@ function Modal({ modal, disableModal }) {
             <div className="modal-child" onClick={(e) => e.stopPropagation()}>
                 {component}
             </div>
-        </div>);
+        </div>
+    );
 }
 
-const mapStateToProps = (state) => {
-    console.log("modal in container", state.ui.modal);
-    return { modal: state.ui.modal };
-};
+const mapStateToProps = state => ({
+    modal: state.ui.modal 
+}); 
 
-const mapDispatchToProps = (dispatch) => {
-    return { disableModal: () => dispatch(disableModal()) };
-};
+
+const mapDispatchToProps = dispatch => ({
+    disableModal: () => dispatch(disableModal())
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Modal);

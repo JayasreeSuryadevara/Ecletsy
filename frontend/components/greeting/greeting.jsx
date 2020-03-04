@@ -1,10 +1,6 @@
 import React from 'react';
-import { enableModal, disableModal } from '../../actions/modal_actions';
-
-
 
 const Greeting = ({ currentUser, logout, enableModal }) => {
-    console.log("currentUser in greeting form" ,currentUser);
 
     const sessionLinks = () => (
         <nav className="login-signup">
