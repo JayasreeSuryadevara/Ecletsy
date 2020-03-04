@@ -8,7 +8,7 @@ const mapStateToProps = ({ errors }) => {
     return {
         errors: errors.session,
         formType: "signup",
-        formTitle: "Create your account",
+        formTitle: "Sign Up",
         buttonType: "Register",
     };
 };

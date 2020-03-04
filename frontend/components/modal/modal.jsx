@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { disableModal } from '../../actions/modal_actions';
-import SignUpFormContainer from './session/signup_form_container';
-import LogInFormContainer from './session/login_form_container';
+import SignUpFormContainer from '../session/signup_form_container';
+import LogInFormContainer from '../session/login_form_container';
 
 function Modal({ modal, disableModal }) {
     if (!modal) { return null }
@@ -26,6 +26,7 @@ function Modal({ modal, disableModal }) {
 }
 
 const mapStateToProps = (state) => {
+    console.log("modal in container", state.ui.modal);
     return { modal: state.ui.modal };
 };
 

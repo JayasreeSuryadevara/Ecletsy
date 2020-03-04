@@ -8,7 +8,7 @@ const mapStateToProps = ({ errors }) => {
     return {
         errors: errors.session,
         formType: "login",
-        formTitle: "Sign in to continue",
+        formTitle: "Sign in",
         buttonType: "Sign in",
     };
 };
@@ -16,7 +16,7 @@ const mapStateToProps = ({ errors }) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         action: (user) => dispatch(login(user)),
-        enableModal: (<button onClick={() => dispatch(enableModal("signup"))}>Sign up</button>),
+        enableModal: (mode) => dispatch(enableModal(mode)),
         disableModal: () => dispatch(disableModal()),
     };
 };

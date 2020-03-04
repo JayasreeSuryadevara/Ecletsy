@@ -1,5 +1,4 @@
 import React from 'react';
-import { Provider } from 'react-redux';
 import {
     Route,
     Redirect,
@@ -9,12 +8,14 @@ import {
 } from 'react-router-dom';
 
 import GreetingContainer from './greeting/greeting_container';
+import Modal from './modal/modal';
 import SignUpFormContainer from './session/signup_form_container';
 import LogInFormContainer from './session/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
     <div>
+        <Modal />
         <header className="logo_greeting">
             <Link to="/" className="header-link">Ecletsy</Link>
             <GreetingContainer />

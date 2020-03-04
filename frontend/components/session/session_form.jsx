@@ -1,16 +1,19 @@
 import React from 'react';
 import { DEMO_USER } from '../../util/demo_user_util';
+import { enableModal, disableModal } from '../../actions/modal_actions'; 
 
 class SessionForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { username: "", email: "", password: "" };
+        this.state = { username: "", password: "" };
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
         this.handleDemo = this.handleDemo.bind(this);
         this.demoUserButton = this.demoUserButton.bind(this);
         this.inputEmailnAddress = this.inputEmailnAddress.bind(this);
+        this.registerForSignInForm = this.registerForSignInForm.bind(this);
+        this.renderCloseButton = this.renderCloseButton.bind(this);
 
     }
 
@@ -26,7 +29,9 @@ class SessionForm extends React.Component {
 
     handleDemo(e) {
         e.preventDefault();
-        this.props.action(DEMO_USER).then(() => this.props.disableModal());
+        this.props.action(DEMO_USER).then(() => {
+            this.props.disableModal()
+        });
     }
 
     demoUserButton() {
@@ -59,6 +64,27 @@ class SessionForm extends React.Component {
         );
     }
 
+    registerForSignInForm() {
+        if ( this.props.formType === 'login' ) {
+            return (
+                <span className="register_link" onClick={() => this.props.enableModal('signup')}>
+                    Register
+                </span>
+            );
+        }
+
+    }
+
+    renderCloseButton() {
+        if ( this.props.formType === 'signup') {
+            return (
+                <span className="signup-close-button"  onClick={ this.props.disableModal }> 
+                    Close
+                </span>
+            );
+        }
+    }
+
     renderErrors() {
         const { errors } = this.props;
         if (errors) {
@@ -72,15 +98,17 @@ class SessionForm extends React.Component {
     render() {
         return (
             <div className="session-form-container">
-                <form className="session-form-box">
-                    <h2>Welcome to Ecletsy!</h2>
-                    <h2 className="form-title"> {this.props.formTitle} </h2>
+                <form className="session-form-box" onSubmit={ this.handleSubmit }>
+                    <div className="form-title-button">
+                        <h2 className="form-title"> {this.props.formTitle} </h2>
+                        {this.registerForSignInForm() }
+                    </div>
                     <br />
-                    {this.renderErrors()}
+                    { this.renderErrors() }
                     <br />
                     <div className="session-form">
                         <br />
-                        <label>Username </label>
+                        <label>Username</label>
                         <br />
                         <input required type="text"
                             value={this.state.username}
@@ -100,12 +128,13 @@ class SessionForm extends React.Component {
                         <br />
                         <div className="login_button_container">
                             <input type="submit"
-                                value="Sign Up"
+                                value={this.props.buttonType}
                                 className="login_button_submit" />
                             {this.demoUserButton()}
+                            {this.renderCloseButton()}
                         </div>
                     </div>
-                    <div classname="session-terms-and-conditions">
+                    <div className="session-terms-and-conditions">
                         <p>
                             By clicking Sign in or Continue with Google, Facebook, or Apple, you agree to Etsy's Terms of Use and Privacy Policy. Etsy may send you communications; you may change your preferences in your account settings. We'll never post without your permission.
                         </p>
