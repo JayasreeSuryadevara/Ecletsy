@@ -1,0 +1,106 @@
+.modal-background {
+  background: rgba(29, 29, 29, 0.7);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+.modal-child {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.login-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.login-input {
+  margin-left: 20px;
+  height: 40px;
+}
+
+.login-form-box {
+  margin: 5px auto;
+  border: 1px solid #888;
+  width: 340px;
+  height: 730px;
+  padding: 15px;
+  align-items: center;
+
+  h2 {
+    margin-top: -1px;
+    font-size: 26px;  
+  }
+}
+.login-form-box label {
+  font-weight: bold;
+}
+.signup-form-box {
+  margin: 5px auto;
+  border: 1px solid #888;
+  width: 340px;
+  height: 730px;
+  padding: 15px;
+  align-items: center;
+
+  h2 {
+    margin-top: -1px;
+    font-size: 26px;  
+  }
+}
+.signup-form-box label {
+  font-weight: bold;
+}
+.login_button_container {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.login_button_submit {
+  align-self: center;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.demo_user_login {
+  align-self: center;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.login-form 
+  input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.signup-form 
+  input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.session-terms-and-conditions {
+  p {
+    font-family: inherit;
+    font-size: 13px;    
+  }
+}
