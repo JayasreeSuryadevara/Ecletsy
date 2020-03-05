@@ -75,17 +75,16 @@ class SessionForm extends React.Component {
                 </button>
             );
         }
-
     }
 
     renderErrors() {
-        const { errors } = this.props;
+        let { errors } = this.props;
         if (errors) {
-            const errors = this.props.errors.map((error, idx) => {
+            errors = this.props.errors.map((error, idx) => {
                 return (<li key={`error-${idx}`}>{error}</li>)
             });
         }
-        return (<ul> {errors} </ul>);
+        return (<ul> { errors } </ul>);
     }
 
     render() {
@@ -94,10 +93,10 @@ class SessionForm extends React.Component {
                 <form className="session-form-box" onSubmit={ this.handleSubmit }>
                     <div className="form-title-button">
                         <h2 className="form-title"> {this.props.formTitle} </h2>
-                        {this.registerForSignInForm() }
+                        { this.registerForSignInForm() }
                     </div>
                     <br />
-                    { this.renderErrors() }
+                        {this.renderErrors() }
                     <br />
                     <div className="session-form">
                         <br />
@@ -124,7 +123,7 @@ class SessionForm extends React.Component {
                                 value={this.props.buttonType}
                                 className="login_button_submit" />
                             <span className="session_other_button">
-                                {this.demoUserOrCloseButton()}
+                                { this.demoUserOrCloseButton() }
                             </span>
                         </div>
                     </div>

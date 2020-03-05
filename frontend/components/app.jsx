@@ -1,15 +1,10 @@
 import React from 'react';
-import {
-    Route,
-    Redirect,
-    Switch,
-    Link,
-    HashRouter
-} from 'react-router-dom';
-
+import { Switch, Link, Route } from 'react-router-dom';
+ 
 import GreetingContainer from './greeting/greeting_container';
 import NavBarContainer from './navbar/navbar_container';
 import Modal from './modal/modal';
+import HomePageContainer from '../components/homepage/homepage_container';
 import SignUpFormContainer from './session/signup_form_container';
 import LogInFormContainer from './session/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -27,6 +22,7 @@ const App = () => (
             </div> */}
         </header>
         <Switch>
+            {/* <Route exact path="/" component={HomePageContainer} /> */}
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
         </Switch>

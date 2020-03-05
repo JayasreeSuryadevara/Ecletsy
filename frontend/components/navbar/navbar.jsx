@@ -20,7 +20,7 @@ const NavBar = ({ currentUser }) => {
     }
     return (
         <div className="nav-bar-menu-list">
-            {categoriyList()}
+            {categoryList()}
         </div>
     );
 };
