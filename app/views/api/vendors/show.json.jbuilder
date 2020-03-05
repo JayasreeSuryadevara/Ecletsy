@@ -1,0 +1,1 @@
+json.partial! "api/vendors/vendor", vendor: @vendor

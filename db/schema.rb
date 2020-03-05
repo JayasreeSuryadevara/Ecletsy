@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_02_221318) do
+ActiveRecord::Schema.define(version: 2020_03_05_200444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "products", force: :cascade do |t|
+    t.string "product_name", null: false
+    t.float "price", null: false
+    t.string "desc", null: false
+    t.integer "vendor_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_name"], name: "index_products_on_product_name", unique: true
+    t.index ["vendor_id"], name: "index_products_on_vendor_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
@@ -26,6 +37,15 @@ ActiveRecord::Schema.define(version: 2020_03_02_221318) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
+  end
+
+  create_table "vendors", force: :cascade do |t|
+    t.string "vendor_name", null: false
+    t.integer "owner_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["owner_id"], name: "index_vendors_on_owner_id"
+    t.index ["vendor_name"], name: "index_vendors_on_vendor_name", unique: true
   end
 
 end

@@ -1,0 +1,1 @@
+json.extract! vendor, :id, :vendor_name, :owner_id

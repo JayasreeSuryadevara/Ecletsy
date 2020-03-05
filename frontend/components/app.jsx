@@ -18,12 +18,12 @@ const App = () => (
                 <Link to="/" className="header-logo-link">Ecletsy</Link>
                 <GreetingContainer />
             </div>
-            {/* <div className="header-bottom-bar">
+            <div className="header-bottom-bar">
                 <NavBarContainer />  
-            </div> */}
+            </div>
         </header>
         <Switch>
-            {/* <Route exact path="/" component={HomePageContainer} /> */}
+            <Route exact path="/" component={HomePageContainer} />
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             <Route component={NoMatchPage} />
