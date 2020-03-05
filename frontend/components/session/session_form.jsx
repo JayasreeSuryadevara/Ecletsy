@@ -70,9 +70,9 @@ class SessionForm extends React.Component {
     registerForSignInForm() {
         if ( this.props.formType === 'login' ) {
             return (
-                <span className="register_link" onClick={() => this.props.enableModal('signup')}>
+                <button className="register-button" onClick={() => this.props.enableModal('signup')}>
                     Register
-                </span>
+                </button>
             );
         }
 

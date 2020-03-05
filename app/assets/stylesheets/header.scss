@@ -1,0 +1,37 @@
+
+.header-logo-link {
+  color: #F1641E;
+  display: inline-block;
+  font-size: xx-large;
+  height: 60px;
+  font-family: "Guardian-EgypTT",serif;
+  padding-left: 30px;
+  padding: 10px; 
+  text-decoration: none;
+  vertical-align: middle;
+}
+.header-top-bar {
+  display: flex;
+  font-style: italic;
+  font-weight: normal;
+  height: 24px;
+  font-size: small;
+  justify-content: space-between;
+  font-family: "Guardian-EgypTT",serif;
+  padding: 10px;
+}
+.login-signup {
+  border-radius: 40px;
+  font-size: 18px;
+  line-height: 1.4;
+  min-height: 36px;
+  min-width: 36px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: black;
+}
+.login-signup:hover {
+    background: lightgrey;
+}

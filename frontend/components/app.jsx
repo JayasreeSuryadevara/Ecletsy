@@ -19,12 +19,12 @@ const App = () => (
         <Modal />
         <header className="logo_greeting">
             <div className="header-top-bar">
-                <Link to="/" className="header-link">Ecletsy</Link>
+                <Link to="/" className="header-logo-link">Ecletsy</Link>
                 <GreetingContainer />
             </div>
-            <div className="header-bottom-bar">
+            {/* <div className="header-bottom-bar">
                 <NavBarContainer />  
-            </div>
+            </div> */}
         </header>
         <Switch>
             <AuthRoute exact path="/login" component={LogInFormContainer} />

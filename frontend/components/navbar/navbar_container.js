@@ -1,12 +1,9 @@
 import NavBar from './navbar';
 import { connect } from 'react-redux';
 
-const mapStateToProps = (state) => {
-    console.log("state in navbarc",state);
-    return(
-       null
-    );
-};
+const mapStateToProps = ({ session, entities: { users } }) => ({
+    currentUser: users[session.id]
+});
 const mapDispatchToProps = dispatch => ({
 
 });

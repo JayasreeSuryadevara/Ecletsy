@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 
 const NavBar = ({ currentUser }) => {
 
-    const categoriyList = () => {
+    const categoryList = () => {
         let categories = CATEGORIES;
         return (
             <>
             {categories.map(category => {
                 return (
-                    <div className="navbar-category">
+                    <div className="navbar-category" key={`category-${category.id}`}>
                         <Link to={`/category/${category.id}`}>{category.name}</Link>
                     </div>
                 )
