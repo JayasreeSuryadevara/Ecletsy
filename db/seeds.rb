@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #  
 # Seed Data for a demo user
-user1=User.create!(username: 'Demo User',password: 'password',email:"demo_user@text.com")
+user1=User.create!(username: 'Demo User',password: 'password',email:"demo_user@text.com", address:"99 Street, Nine city, CA, 99999")
 
