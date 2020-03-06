@@ -1,113 +1,113 @@
 
-.modal-background {
-  background: rgba(161, 156, 156, 0.7);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 10;
-}
-.modal-child {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.session-form-box{
-  margin: 5px auto;
-  background: whitesmoke;
-  border: 1px solid black;
-  width: 340px;
-  height: fit-content;
-  padding: 15px;
-  align-items: center;
-  font-weight: bold;
+// .modal-background {
+//   background: rgba(161, 156, 156, 0.7);
+//   position: fixed;
+//   top: 0;
+//   bottom: 0;
+//   right: 0;
+//   left: 0;
+//   z-index: 10;
+// }
+// .modal-child {
+//     position: absolute;
+//     top: 45%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+// }
+// .session-form-box{
+//   margin: 5px auto;
+//   background: whitesmoke;
+//   border: 1px solid black;
+//   width: 340px;
+//   height: fit-content;
+//   padding: 15px;
+//   align-items: center;
+//   font-weight: bold;
 
-  h2 {
-    margin-top: -1px;
-    font-size: 26px;  
-  }
+//   h2 {
+//     margin-top: -1px;
+//     font-size: 26px;  
+//   }
 
-  ul {
-    font-family: inherit;
-  }
-}
-.session-form-input{
-    display: block;
-    height: 40px;
-    width: 160px;
-    border-radius: 3px;
-    background-color: rgb(237, 241, 248);
-    font: 400 11px system-ui
-}
-.login_button_container {
-  font-weight: bold;
-  font-size: 15px;
-}
-.session-form-container {
-    display: flex;
-    align-items: stretch;
-    padding: 10px;
-}
-.login_button_submit {
-  align-self: center;
-  background-color: #222222;
-  color: #FFF;
-  font-size: medium;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-color: rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  width: 100%;
-  border-radius: 2px;
-}
-.session-other-button {
-  align-self: center;
-  background-color: #222222;
-  color: #FFF;
-  font-size: medium;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-color: rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  width: 100%;
-  border-radius: 2px;
-}
-.session-form 
-  input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-.form-title-button {
-  display: flex;
-  justify-content: space-between;
-}
-.register-button {
-  cursor: pointer;
-  font-size: 14px;
-  height: fit-content;
-  width: fit-content;
-  padding: 10px 20px 10px 20px;
-  border-radius: 24px;
-  text-align: center;
-  border: 2px solid black;
-}
-.form-title {
-  padding: 5px;
-  text-align: center;
-}
+//   ul {
+//     font-family: inherit;
+//   }
+// }
+// .session-form-input{
+//     display: block;
+//     height: 40px;
+//     width: 160px;
+//     border-radius: 3px;
+//     background-color: rgb(237, 241, 248);
+//     font: 400 11px system-ui
+// }
+// .login_button_container {
+//   font-weight: bold;
+//   font-size: 15px;
+// }
+// .session-form-container {
+//     display: flex;
+//     align-items: stretch;
+//     padding: 10px;
+// }
+// .login_button_submit {
+//   align-self: center;
+//   background-color: #222222;
+//   color: #FFF;
+//   font-size: medium;
+//   padding: 14px 20px;
+//   margin: 8px 0;
+//   border: none;
+//   border-color: rgba(0, 0, 0, 0.1);
+//   cursor: pointer;
+//   width: 100%;
+//   border-radius: 2px;
+// }
+// .session-other-button {
+//   align-self: center;
+//   background-color: #222222;
+//   color: #FFF;
+//   font-size: medium;
+//   padding: 14px 20px;
+//   margin: 8px 0;
+//   border: none;
+//   border-color: rgba(0, 0, 0, 0.1);
+//   cursor: pointer;
+//   width: 100%;
+//   border-radius: 2px;
+// }
+// .session-form 
+//   input[type=text], input[type=password] {
+//     width: 100%;
+//     padding: 12px 20px;
+//     margin: 8px 0;
+//     display: inline-block;
+//     border: 1px solid #ccc;
+//     box-sizing: border-box;
+// }
+// .form-title-button {
+//   display: flex;
+//   justify-content: space-between;
+// }
+// .register-button {
+//   cursor: pointer;
+//   font-size: 14px;
+//   height: fit-content;
+//   width: fit-content;
+//   padding: 10px 20px 10px 20px;
+//   border-radius: 24px;
+//   text-align: center;
+//   border: 2px solid black;
+// }
+// .form-title {
+//   padding: 5px;
+//   text-align: center;
+// }
 
-.session-terms-and-conditions {
-  p {
-    font-size: 12px;  
-    color: grey;  
-    padding-top: 20px;
-  }
-}
+// .session-terms-and-conditions {
+//   p {
+//     font-size: 12px;  
+//     color: grey;  
+//     padding-top: 20px;
+//   }
+// }

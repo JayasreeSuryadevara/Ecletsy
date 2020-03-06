@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-
+/* 
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -47,4 +47,4 @@ a:-webkit-any-link {
   padding: 40px;
   font-family: "Guardian-EgypTT",serif;
   font-size: large;
-}
+} */

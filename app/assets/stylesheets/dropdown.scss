@@ -1,63 +1,63 @@
-.dropdown-main {
-    padding-right: 50px;
-}
-.dropdown-main:hover .user-profile-dropdown-menu {
-    display: block;
-    z-index: 1;
-}
-.dropdown-btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 40px;
-    width: 60px;
-    border-radius: 40px;
-    cursor: pointer;
-}
-.dropdown-profile-pic {
-    display: block;
-    height: 48px;
-    width: 38px;
-    flex-direction: row;
-}
-.user-icon-down-arrow {
-    height: 30px;
-    width: 30px;
-    flex-direction: row;
-}
-.user-profile-dropdown-menu {
-    display: none;
-    position: absolute;
-    height: fit-content;
-    min-width: 100px;
-    right: 30px;
-    border: 1px solid grey;
-    border-radius: 5px;
-}
-.dropdown-btn:hover {
-    background: lightgrey;
-}
-.dropdown-header {
-    display: flex;
-    padding: 20px 10px 20px 10px;
-    font-size: medium;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid lightgrey;
-}
-.dropdown-signout-container {
-    align-items: center;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    font-size: medium;
-}
-.dropdown-profile-pic {
-    padding: 10px;
-    height: 40px;
-    width: 40px;
-    align-items: center;
-}
-.dropdown-user-name {
-    padding: 10px;
-    text-align: center;
-}
+// .dropdown-main {
+//     padding-right: 50px;
+// }
+// .dropdown-main:hover .user-profile-dropdown-menu {
+//     display: block;
+//     z-index: 1;
+// }
+// .dropdown-btn {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-evenly;
+//     height: 40px;
+//     width: 60px;
+//     border-radius: 40px;
+//     cursor: pointer;
+// }
+// .dropdown-profile-pic {
+//     display: block;
+//     height: 48px;
+//     width: 38px;
+//     flex-direction: row;
+// }
+// .user-icon-down-arrow {
+//     height: 30px;
+//     width: 30px;
+//     flex-direction: row;
+// }
+// .user-profile-dropdown-menu {
+//     display: none;
+//     position: absolute;
+//     height: fit-content;
+//     min-width: 100px;
+//     right: 30px;
+//     border: 1px solid grey;
+//     border-radius: 5px;
+// }
+// .dropdown-btn:hover {
+//     background: lightgrey;
+// }
+// .dropdown-header {
+//     display: flex;
+//     padding: 20px 10px 20px 10px;
+//     font-size: medium;
+//     display: flex;
+//     justify-content: space-between;
+//     border-bottom: 1px solid lightgrey;
+// }
+// .dropdown-signout-container {
+//     align-items: center;
+//     padding-left: 20px;
+//     padding-bottom: 20px;
+//     font-size: medium;
+// }
+// .dropdown-profile-pic {
+//     padding: 10px;
+//     height: 40px;
+//     width: 40px;
+//     align-items: center;
+// }
+// .dropdown-user-name {
+//     padding: 10px;
+//     text-align: center;
+// }
