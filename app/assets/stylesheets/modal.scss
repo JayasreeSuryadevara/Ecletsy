@@ -16,7 +16,7 @@
 }
 .session-form-box{
   margin: 5px auto;
-  background: whitesmoke;
+  background: white;
   border: 1px solid black;
   width: 340px;
   height: fit-content;
@@ -37,9 +37,12 @@
     display: block;
     height: 40px;
     width: 160px;
-    border-radius: 3px;
+    border-radius: 5px;
     background-color: rgb(237, 241, 248);
     font: 400 11px system-ui
+}
+.session-form-input:hover {
+  border: 1px solid gray;
 }
 .login_button_container {
   font-weight: bold;
@@ -61,7 +64,10 @@
   border-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
   width: 100%;
-  border-radius: 2px;
+  border-radius: 5px;
+}
+.login_button_submit:hover {
+  background-color: #3b3b3b;
 }
 .session-other-button {
   align-self: center;
@@ -74,7 +80,10 @@
   border-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
   width: 100%;
-  border-radius: 2px;
+  border-radius: 5px;
+}
+.session-other-button:hover {
+  background-color: #3b3b3b; 
 }
 .session-form 
   input[type=text], input[type=password] {
@@ -98,6 +107,9 @@
   border-radius: 24px;
   text-align: center;
   border: 2px solid black;
+}
+.register-button:hover {
+  background: lightgrey;
 }
 .form-title {
   padding: 5px;

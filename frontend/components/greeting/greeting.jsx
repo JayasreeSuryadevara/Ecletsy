@@ -6,18 +6,17 @@ const Greeting = ({ currentUser, logout, enableModal }) => {
 
     const sessionLinks = () => (
         <div className="login-signup">
-            <span className="login_link">
-                <a href="#" onClick={() => enableModal('login')} >
+            <button className="header_login_button"
+                onClick={() => enableModal('login')} >
                     Sign in
-                </a>
-            </span>
+            </button>
         </div>
     );
     const personalGreeting = () => (
         <div className="dropdown-main">
             <button className="dropdown-btn">
 
-                <div className="dropdown-profile-pic">
+                <div className="dropdown-button-profile-pic">
                     <i class="fas fa-user-circle"></i>
                 </div>
                 <div className="user-icon-down-arrow">
