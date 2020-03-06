@@ -47,6 +47,20 @@
 .session-form-input:hover {
   border: 1px solid gray;
 }
+.session-form-fname-input{
+    display: block;
+    height: 48px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    background-color: white;
+    font: 400 11px system-ui
+}
+.session-form-fname-input:hover {
+  border: 1px solid gray;
+}
 .login_button_container {
   font-weight: bold;
   font-size: 15px;
