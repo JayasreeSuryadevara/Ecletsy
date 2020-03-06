@@ -1,14 +1,19 @@
 
 .header-logo-link {
   color: #F1641E;
-  display: inline-block;
-  font-size: xx-large;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: 48px;
   height: 60px;
+  width: fit-content;
   font-family: "Guardian-EgypTT",serif;
   padding-left: 30px;
-  padding: 10px; 
+  padding-bottom: 10px;
+  text-align: left;
   text-decoration: none;
-  vertical-align: middle;
+  font-stretch: wider;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 .header-top-bar {
   display: flex;

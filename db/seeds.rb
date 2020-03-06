@@ -8,5 +8,4 @@
 #  
 # Seed Data for a demo user
 user1=User.create!(username: 'Demo User',password: 'password',email:"demo_user@text.com")
-user1.profile_img.attach(io: File.open("/app/assets/images/"),filename:"user_icon.jpeg")
 

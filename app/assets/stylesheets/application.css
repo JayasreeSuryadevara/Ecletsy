@@ -32,10 +32,6 @@ a:-webkit-any-link {
   cursor: pointer;
   text-decoration: none;
 }
-body {
-  font-family: 'Abel', sans-serif;
-}
-
 .content {
   height: 100%;
 }

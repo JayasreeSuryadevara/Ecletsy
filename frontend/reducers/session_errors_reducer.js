@@ -14,10 +14,7 @@ export default (state = [], action) => {
 
         case RECEIVE_SESSION_ERRORS:
             return action.errors;
-
-        case DISABLE_MODAL:
-            return [];
-
+            
         default:
             return state;
     }

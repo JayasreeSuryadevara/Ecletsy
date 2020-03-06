@@ -22,8 +22,9 @@ class Product < ApplicationRecord
     validates :price, numericality: { greater_than: 0 }, presence: true
     validates :vendor_id, presence: true
 
-    belongs_to: :vendor,
+    belongs_to :vendor,
         class_name: :Vendor,
         foreign_key: :vendor_id
         
+    has_one_attached :photo
 end
