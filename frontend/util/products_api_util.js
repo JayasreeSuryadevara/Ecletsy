@@ -23,3 +23,10 @@ export const updateProduct = (product) => {
         data: { product }
     });
 }
+export const createProduct = (product) => {
+    return $.ajax({
+        method: "POST",
+        url: `api/products`,
+        data: { product }
+    });
+}

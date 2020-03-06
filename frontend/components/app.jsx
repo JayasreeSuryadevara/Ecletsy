@@ -18,9 +18,9 @@ const App = () => (
                 <Link to="/" className="header-logo-link">Ecletsy</Link>
                 <GreetingContainer />
             </div>
-            {/* <div className="header-bottom-bar">
+            <div className="header-bottom-bar">
                 <NavBarContainer />  
-            </div> */}
+            </div>
         </header>
         <Switch>
             <Route exact path="/" component={HomePageContainer} />

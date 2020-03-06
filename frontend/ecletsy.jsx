@@ -5,7 +5,7 @@ import Root from './components/root';
 
 document.addEventListener('DOMContentLoaded', () => {    
     let store;
- console.log("test");
+    
     // Bootstarpping current user to the window
     if (window.currentUser){
         const preloadedState = { 
