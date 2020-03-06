@@ -1,7 +1,7 @@
 import React from 'react';
 
 class HomePage extends React.Component{
-
+// Need to do product index for the main page
     render(){
         return (
             <>

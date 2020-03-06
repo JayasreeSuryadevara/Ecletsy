@@ -4,13 +4,13 @@ import { DEMO_USER } from '../../util/demo_user_util';
 class SessionForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { username: "", password: "" };
+        this.state = { email: "", username: "", password: "" };
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
         this.handleDemo = this.handleDemo.bind(this);
         this.demoUserOrCloseButton = this.demoUserOrCloseButton.bind(this);
-        this.inputEmailnAddress = this.inputEmailnAddress.bind(this);
+        this.inputFirstName = this.inputFirstName.bind(this);
         this.registerForSignInForm = this.registerForSignInForm.bind(this);
 
     }
@@ -44,27 +44,20 @@ class SessionForm extends React.Component {
         }
     }
 
-    inputEmailnAddress() {
-        if (this.props.formType === "login") return null;
-        return (
-            <div>
-                <label>Email</label>
-                <br />
-                <input required type="text"
-                    value={this.state.email}
-                    onChange={this.update('email')}
-                    className="session-form-input"
-                />
-                <br />
-                <label>Address</label>
-                <br />
-                <input required type="text"
-                    value={this.state.address}
-                    onChange={this.update('address')}
-                    className="session-form-input"
-                />
-            </div>
-        );
+    inputFirstName() {
+        if (this.props.formType === "signup") {
+            return (
+                <div>
+                    <label>First Name</label>
+                    <br />
+                    <input required type="text"
+                        value={this.state.username}
+                        onChange={this.update('username')}
+                        className="session-form-input"
+                    />
+                </div>
+            );           
+        }
     }
 
     registerForSignInForm() {
@@ -100,13 +93,15 @@ class SessionForm extends React.Component {
                     <br />
                     <div className="session-form">
                         <br />
-                        <label>Username</label>
+                        <label>Email address</label>
                         <br />
                         <input required type="text"
-                            value={this.state.username}
-                            onChange={this.update('username')}
+                            value={this.state.email}
+                            onChange={this.update('email')}
                             className="session-form-input"
                         />
+                        <br />
+                            { this.inputFirstName() }
                         <br />
                         <label>Password</label>
                         <br />
@@ -115,8 +110,6 @@ class SessionForm extends React.Component {
                             onChange={this.update('password')}
                             className="session-form-input"
                         />
-                        <br />
-                        { this.inputEmailnAddress() }
                         <br />
                         <div className="login_button_container">
                             <input type="submit"
@@ -129,7 +122,7 @@ class SessionForm extends React.Component {
                     </div>
                     <div className="session-terms-and-conditions">
                         <p>
-                            By clicking Sign in or Continue with Google, Facebook, or Apple, you agree to Etsy's Terms of Use and Privacy Policy. Etsy may send you communications; you may change your preferences in your account settings. We'll never post without your permission.
+                            By clicking Sign in or Continue with Google, Facebook, or Apple, you agree to Ecletsy's Terms of Use and Privacy Policy. Ecletsy may send you communications; you may change your preferences in your account settings. We'll never post without your permission.
                         </p>
                     </div>
                 </form>

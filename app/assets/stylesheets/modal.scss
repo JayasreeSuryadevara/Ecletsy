@@ -35,10 +35,13 @@
 }
 .session-form-input{
     display: block;
-    height: 40px;
-    width: 160px;
+    height: 48px;
+    width: 100%;
+    font-size: 16px;
     border-radius: 5px;
-    background-color: rgb(237, 241, 248);
+    padding-top: 9px;
+    padding-bottom: 9px;
+    background-color: rgb(232, 240, 254);
     font: 400 11px system-ui
 }
 .session-form-input:hover {
