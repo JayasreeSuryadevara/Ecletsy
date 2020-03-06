@@ -20,6 +20,6 @@ export const updateProduct = (product) => {
     return $.ajax({
         method: "PATCH",
         url: `api/products/${product.id}`,
-        data: product
+        data: { product }
     });
 }
