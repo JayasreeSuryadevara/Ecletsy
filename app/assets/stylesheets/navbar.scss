@@ -1,16 +1,16 @@
 .nav-bar-menu-list {
     display: flex;
     justify-content: space-evenly;
-    color: rgb(44, 43, 43);
-    padding-top: 30px;
+    color: rgb(43, 40, 40);
+    padding-top: 28px;
     height: 30px;
-    font-family: "Guardian-EgypTT",serif;
-    font-size: 14px;
-    font-stretch: wider;
-    border-bottom: 3px solid rgb(221, 225, 228);
+    font-family: "Guardian-EgypTT",sans-serif;
+    font-size: 13px;
+    font-stretch: expanded;
+    border-bottom: 2px solid rgb(221, 225, 228);
     width: 100%;
 }
 .nav-bar-menu-list a:hover {
-    padding-bottom: 12px;
-    border-bottom: 3px solid black;
+    padding-bottom: 14px;
+    border-bottom: 2px solid black;
 }

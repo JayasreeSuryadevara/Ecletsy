@@ -17,7 +17,6 @@
 }
 .header-top-bar {
   display: flex;
-  font-style: italic;
   font-weight: normal;
   height: 24px;
   font-size: small;
@@ -40,7 +39,7 @@
   color: black;
 }
 .header_login_button:hover {
-    background: lightgrey;
+    background: #eee;
 }
 .login-signup {
   padding-right: 60px;
