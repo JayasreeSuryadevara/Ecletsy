@@ -2,18 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class ProductShow extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
             productId: this.props.match.params.id
         };
         this.handleEdit = this.handleEdit.bind(this);
-        this.handleChange = this.handleChange.bind(this);
     }
+
     componentDidMount() {
         this.props.fetchProduct(this.state.productId);
         // this.props.fetchVendor(this.props.match.params.vendorId);
     }
+
     componentDidUpdate(prevProps) {
         if (this.props.match.params.id !== prevProps.match.params.id) {
             this.props.fetchProduct(this.props.match.params.id);
@@ -23,32 +25,39 @@ class ProductShow extends React.Component {
 
     handleEdit(e) {
         e.preventDefault();
-        this.props.history.push(`/products/${this.props.product.id}/edit`);
+        this.props.history.push(`/products/${this.props.product.productId}/edit`);
     }
 
     render() {
-        let { product, vendor} = this.props;
-
+        let { product } = this.props;
+        console.log(product);
         return (
             <div className="product-show">
-                {/* add image */}
-                <div className="product-info">
-                    <ul>
-                        <li>
-                            <Link to={`/vendors/${vendor.id}`}>{vendor.vendor_name}</Link>
-                        </li>
-                        <li className="product-show-name">{product.product_name}</li>
-                        <li className="product-show-price">
-                            <strong>${product.price}</strong>
-                        </li>
-                    </ul>
-                    <div className="product-desc">
-                        <label>Description</label>
+                <div className="product-show-img">
+                    <img src={product.image_url} />     
+                </div>
+                <div className="product-show-info">
+                    {/* <div> */}
+                        {/* <Link to={`/vendors/${vendor.id}`}>{vendor.vendor_name}</Link> */}
+                    {/* </div> */}
+                    <div className="product-show-name">
+                        <label> Name </label>
+                        <br />
+                        {product.product_name}
+                    </div>
+                    <div className="product-show-price">
+                        <label> Price </label>
+                        <br />
+                        <strong>${product.price}</strong>
+                    </div>
+                    <div className="product-show-desc">
+                        <label>Description </label>
+                        <br />
                         {product.desc}
                     </div>
                     <div className="product-show-vendor-info">
                         <div className="product-show-vendor-info-box">
-                            <p>Try other products from {vendor.vendor_name}</p>
+                            {/* <p>Try other products from {vendor.vendor_name}</p> */}
                             {/* <button>to vendor page</button> */}
                         </div>
                     </div>
@@ -58,4 +67,4 @@ class ProductShow extends React.Component {
     }
 }
 
-export default withRouter(ProductShow);
+export default ProductShow;

@@ -2,8 +2,9 @@ import { connect } from 'react-redux';
 import HomePage from './homepage';
 import { fetchProducts } from '../../actions/product_actions';
 
-const mapStateToProps = ({ session, entities: { users } }) => ({
-    currentUser: users[session.id]
+const mapStateToProps = ({ session, entities: { users, products } }) => ({
+    currentUser: users[session.id],
+    products
 });
 
 const mapDispatchToProps = dispatch => ({

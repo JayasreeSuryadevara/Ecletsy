@@ -9,6 +9,7 @@
 # Seed Data for a demo user
 User.destroy_all
 Product.destroy_all
+Vendor.destroy_all
 
 # Seeds for users and users mapped as vendors 
 user1=User.create!(username: 'Demo User',password: 'password',email:"demo_user@text.com", address:"99 Street, Nine city, CA, 99999")
@@ -19,14 +20,25 @@ user5=User.create!(username: 'Owner Craft',password: 'password',email:"CraftJewe
 user6=User.create!(username: 'Entreprenuer1',password: 'password',email:"Entreprenuer1@test.com", address:"address test 3")
 user7=User.create!(username: 'Entreprenuer2',password: 'password',email:"Entreprenuer2@test.com", address:"address test 3")
 
-# Seeds for products 
-product1=Product.create!(product_name: 'Linen Tea Towel',price: '12.82',desc: 'Linen Dish Towel Towel with Hook')
-product2=Product.create!(product_name: 'OLA Mug',price: '77.00',desc: 'Handmade Mugs with distinct patterns')
-product3=Product.create!(product_name: 'Floating Shelf',price: '10.50',desc: 'Heavy Duty Open Shelving, Farmhouse Style')
-product4=Product.create!(product_name: 'Personalised101',price: '33.90',desc: 'Personalised Pressed Flower Necklace')
-product5=Product.create!(product_name: 'Zodiac Ring',price: '49.00',desc: 'Zodiac Constellation Ring')
-product6=Product.create!(product_name: 'MPSPrint2',price: '30.00',desc: 'Women March On Print')
-product7=Product.create!(product_name: 'NameLeatherChain',price: '5.95',desc: 'Personalized Leather Keychain')
-product8=Product.create!(product_name: 'OutdoorPillow1',price: '8.00',desc: 'Beige gray red Pillow case')
-
 # vendors who own the products
+vendor1=Vendor.create!(vendor_name: 'ELEVEN600',owner_id: user3.id)
+vendor2=Vendor.create!(vendor_name: 'Crafty Jewelry',owner_id: user6.id)
+vendor3=Vendor.create!(vendor_name: 'MP Studio',owner_id: user4.id)
+vendor4=Vendor.create!(vendor_name: 'Supplies', owner_id: user2.id)
+
+# Seeds for products 
+product1=Product.create!(product_name: 'Linen Tea Towel',price: '12.82',desc: 'Linen Dish Towel - Towel with Hook',vendor_id: vendor1.id)
+product2=Product.create!(product_name: 'OLA Mug',price: '77.00',desc: 'Handmade Mugs with distinct patterns',vendor_id: vendor1.id)
+product3=Product.create!(product_name: 'Floating Shelf',price: '10.50',desc: 'Heavy Duty Open Shelving, Farmhouse Style',vendor_id: vendor1.id)
+product4=Product.create!(product_name: 'Personalised101',price: '33.90',desc: 'Personalised Pressed Flower Necklace',vendor_id: vendor2.id)
+product5=Product.create!(product_name: 'Zodiac Ring',price: '49.00',desc: 'Zodiac Constellation Ring',vendor_id: vendor2.id)
+product6=Product.create!(product_name: 'MPSPrint2',price: '30.00',desc: 'Women March On Print',vendor_id: vendor3.id)
+product7=Product.create!(product_name: 'NameLeatherChain',price: '5.95',desc: 'Personalized Leather Keychain',vendor_id: vendor2.id)
+product8=Product.create!(product_name: 'OutdoorPillow1',price: '8.00',desc: 'Beige gray red Pillow case',vendor_id: vendor1.id)
+
+# Attaching images for the products from AWS bucket
+# file1 = File.open('s3://ecletsy-pro/product1-img.jpg')
+# product1.photo.attach(io: file1, filename: 'product1-img.jpg')
+  img_path = Rails.root.join('app', 'assets', 'images', 'product1-img.jpg' )
+  file = File.open(img_path)
+  product1.photo.attach(io: file, filename: 'product1-img.jpg')

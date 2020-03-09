@@ -8,6 +8,7 @@ import HomePageContainer from '../components/homepage/homepage_container';
 import NoMatchPage from '../components/homepage/no_match_page';
 import SignUpFormContainer from './session/signup_form_container';
 import LogInFormContainer from './session/login_form_container';
+import ProductShowContainer from '../components/products/product_show_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -26,6 +27,7 @@ const App = () => (
             <Route exact path="/" component={HomePageContainer} />
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+            <Route exact path="/products/:id" component={ProductShowContainer} />
             <Route component={NoMatchPage} />
         </Switch>
     </div>

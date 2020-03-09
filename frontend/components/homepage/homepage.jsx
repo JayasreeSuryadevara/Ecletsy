@@ -4,11 +4,14 @@ import ProductIndexContainer from '../products/product_index_container';
 class HomePage extends React.Component{
     constructor(props){
         super(props);
+        this.state = { isLoaded: false }
         this.homepageBanner = this.homepageBanner.bind(this);
     }
 
     componentDidMount() {
-        this.props.fetchProducts();
+        this.props.fetchProducts().then(products => {
+            this.setState({ isLoaded: true });
+        });
     }
 
     homepageBanner(){
@@ -58,11 +61,15 @@ class HomePage extends React.Component{
     }
 
     render(){
-        // debugger;
+
         return (
             <div>
                 <div>{this.homepageBanner()}</div>
-                <div> <ProductIndexContainer products={this.props.products} /></div>
+                <div>
+                    {this.state.isLoaded ? 
+                        <ProductIndexContainer products={this.props.products} /> : null
+                    }
+                </div>
             </div>
         );
     }

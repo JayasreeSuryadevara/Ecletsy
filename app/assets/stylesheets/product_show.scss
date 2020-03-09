@@ -1,0 +1,22 @@
+.product-show {
+    display: flex;
+    justify-content: space-evenly;
+}
+.product-show-img {
+    height: 300;
+    width: 300;
+    padding-top: 40px;
+
+}
+.product-show-info {
+    height: 300;
+    width: 300;
+    padding-top: 40px;
+    font-size: x-large;
+    font-stretch: ultra-expanded;
+    line-height: 2;
+
+}
+.product-show-info label{
+    font-weight: bold;
+}
