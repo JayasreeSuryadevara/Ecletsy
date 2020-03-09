@@ -2,11 +2,10 @@ import {
     RECEIVE_CURRENT_USER,
     RECEIVE_SESSION_ERRORS
 } from "../actions/session_actions";
-import { DISABLE_MODAL } from "../actions/modal_actions";
 
-export default (state = [], action) => {
+export default (oldState = [], action) => {
 
-    Object.freeze(state);
+    Object.freeze(oldState );
     
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
@@ -16,6 +15,6 @@ export default (state = [], action) => {
             return action.errors;
             
         default:
-            return state;
+            return oldState ;
     }
 };

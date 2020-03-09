@@ -42,7 +42,14 @@ a:-webkit-any-link {
   float: left;
   position: relative;
 }
-
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family:Guardian-EgyptTT-Light;
+  src: url(https://www.etsy.com/assets/type/Guardian-EgypTT-Light.woff2?v=2)
+}
 .no-match-page {
   padding: 40px;
   font-family: "Guardian-EgypTT",serif;

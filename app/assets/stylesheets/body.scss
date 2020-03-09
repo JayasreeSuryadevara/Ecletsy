@@ -17,6 +17,92 @@
         margin-block-end: 0.67em;
         margin-inline-start: 0px;
         margin-inline-end: 0px;
-        -webkit-font-smoothing: antialiased;
     }
+}
+.hmpg-banner-level-2 {
+    display: flex;
+    margin: 0;
+    height: 320px;
+}
+.hmpg-banner-l2-main-tab {
+    background-color: #9fc062;
+    display: flex;
+    box-sizing: border-box;
+    flex: 0 0 67%;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 100%;
+    height: 100%;
+}
+.hmpg-banner-l2-main-box-info {
+    height: 100%;
+    padding-left: 18px;
+    padding-bottom: 18px;
+    padding-right: 18px;
+    padding-top: 18px;
+    text-align: center;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.hp-bn-l1-1 {
+    font-family: "Guardian-EgypTT",serif;
+    font-stretch: wider;
+    font-size: 26px;
+    line-height: 1.2;
+    font-weight: 100;
+    padding-bottom: 10px;
+    -webkit-font-smoothing: antialiased;
+}
+.hp-bn-l1-2 {
+    font-size: 14px;
+    font-weight: 300;
+}
+.hp-bn-l1-3 {
+    font-size: 14px;
+    font-weight: 300;
+}
+.hmpg-banner-l2-main-tab-img {
+    flex: 0 0 67%;
+    display: block;
+}
+.hmpg-banner-l2-second-box {
+    flex: 0 0 33%;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    font-size: 14px;
+    line-height: 1.4;
+    height: 320px;
+}
+.hmpg-banner-l2-second-box-info {
+    height: 222px;
+    border: 1px solid #E1E3DF;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 18px;
+    margin-bottom: 18px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: bottom;
+}
+.hmpg-banner-l2-third-box-info {
+    background-color: #9fc062;
+    height: 80px;
+    border: 1px solid #E1E3DF;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 18px;
+    margin-bottom: 2px;
+    cursor: pointer;
 }

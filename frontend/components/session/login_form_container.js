@@ -1,15 +1,14 @@
-import React from "react";
-import { connect } from "react-redux";
-import { login } from "../../actions/session_actions";
-import SessionForm from "./session_form";
-import { enableModal, disableModal } from "../../actions/modal_actions";
+import { connect } from 'react-redux';
+import { login } from '../../actions/session_actions';
+import SessionForm from './session_form';
+import { enableModal, disableModal } from '../../actions/modal_actions';
 
 const mapStateToProps = ({ errors }) => {
     return {
         errors: errors.session,
-        formType: "login",
-        formTitle: "Sign in",
-        buttonType: "Sign in",
+        formType: 'login',
+        formTitle: 'Sign in',
+        buttonType: 'Sign in',
     };
 };
 

@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-// import DropDownContainer from '../drop-down/drop_down_container';
 
 const Greeting = ({ currentUser, logout, enableModal }) => {
 
@@ -47,24 +45,7 @@ const Greeting = ({ currentUser, logout, enableModal }) => {
         </div>
     );
 
-    // const personalGreeting = () => {
-    //     console.log("curent user in greeting ", currentUser);
-    //     return (
-    //         <div className="header-group">
-    //             <DropDownContainer />
-    //         </div>
-    //     );
-    // };
-
-    // const personalGreeting = () => (
-    //     <hgroup className="header-group">
-    //         <h2 className="header-name">Welcome back, {currentUser.username}!</h2>
-    //         <button className="logout_button" onClick={logout}>Log Out</button>
-    //     </hgroup>
-    // );
-
     return currentUser ? personalGreeting() : sessionLinks();
 };
-
 
 export default Greeting;
