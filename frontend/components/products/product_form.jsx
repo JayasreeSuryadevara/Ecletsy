@@ -12,7 +12,7 @@ class ProductForm extends React.Component {
 
     componentDidMount() {
         if (this.props.formType === 'update'){
-            this.props.fetchProduct(this.props.match.params.productId)
+            this.props.fetchProduct(this.props.match.params.id)
         }
     }
 

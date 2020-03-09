@@ -5,19 +5,19 @@ class ProductShow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            product_id: this.props.match.params.productId
+            productId: this.props.match.params.id
         };
         this.handleEdit = this.handleEdit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
     componentDidMount() {
-        this.props.fetchProduct(this.props.match.params.productId);
-        this.props.fetchVendor(this.props.match.params.vendorId);
+        this.props.fetchProduct(this.state.productId);
+        // this.props.fetchVendor(this.props.match.params.vendorId);
     }
     componentDidUpdate(prevProps) {
-        if (this.props.match.params.productId !== prevProps.match.params.productId) {
-            this.props.fetchProduct(this.props.match.params.productId);
-            this.props.fetchVendor(this.props.match.params.vendorId);
+        if (this.props.match.params.id !== prevProps.match.params.id) {
+            this.props.fetchProduct(this.props.match.params.id);
+            // this.props.fetchVendor(this.props.match.params.vendorId);
         }
     }
 
@@ -47,10 +47,9 @@ class ProductShow extends React.Component {
                         {product.desc}
                     </div>
                     <div className="product-show-vendor-info">
-                        <div className="product-show-vendor-info-wrapper clickable">
+                        <div className="product-show-vendor-info-box">
                             <p>Try other products from {vendor.vendor_name}</p>
                             {/* <button>to vendor page</button> */}
-                            </div>
                         </div>
                     </div>
                 </div>

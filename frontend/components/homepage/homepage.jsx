@@ -1,11 +1,16 @@
 import React from 'react';
+import ProductIndexContainer from '../products/product_index_container';
 
 class HomePage extends React.Component{
     constructor(props){
         super(props);
         this.homepageBanner = this.homepageBanner.bind(this);
     }
-// Need to do product index for the main page
+
+    componentDidMount() {
+        this.props.fetchProducts();
+    }
+
     homepageBanner(){
         const currentUser = this.props.currentUser;
         if (currentUser) return null;
@@ -28,13 +33,13 @@ class HomePage extends React.Component{
                             </span>
                         </div>
                         <div className="hmpg-banner-l2-main-tab-img">
-                            <img src="/app/assets/images/female-entpnr-hpg-1.jpg" />
+                            <img src={window.banner1Url} />
                         </div>
                     </div>
                     <div className="hmpg-banner-l2-second-box">
-                        <div className="hmpg-banner-l2-second-box-info">
-                            <img src="/app/assets/images/home-ideas-hpg-1.jpg" />
-                            <span>
+                        <div className="hmpg-banner-l2-second-box-img">
+                            {/* <img src={window.banner2Url} /> */}
+                            <span className="hmpg-banner-l2-second-box-info">
                                 Ideas to make your home feel fresh.
                             </span>
                             <p> Get Inspired > </p>
@@ -53,8 +58,12 @@ class HomePage extends React.Component{
     }
 
     render(){
+        // debugger;
         return (
-            <div>{this.homepageBanner()}</div>
+            <div>
+                <div>{this.homepageBanner()}</div>
+                <div> <ProductIndexContainer products={this.props.products} /></div>
+            </div>
         );
     }
 };

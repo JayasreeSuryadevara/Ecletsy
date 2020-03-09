@@ -3,7 +3,7 @@ import { updateProduct } from '../../actions/product_actions';
 import ProductForm from './product_form';
 
 const mapStateToProps = (state, ownProps) => {
-    const productId = ownProps.match.params.productId;
+    const productId = ownProps.match.params.id;
     const product = state.entities.products[productId];
     return {
         errors: state.errors.product,

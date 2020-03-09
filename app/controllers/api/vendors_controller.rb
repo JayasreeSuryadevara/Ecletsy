@@ -38,18 +38,6 @@ class Api::VendorsController < ApplicationController
 
   end
 
-  def update
-
-    @vendor = Vendor.find(params[:id])
-
-    if @vendor.destroy
-      render :show
-    else
-      render json: @vendor.errors.full_messages, status: 422
-    end
-
-  end
-
   private
 
   def vendor_params

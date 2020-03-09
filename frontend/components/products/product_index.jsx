@@ -11,13 +11,13 @@ class ProductIndex extends React.Component {
             return(
                 <li className='product-index-item'>
                     <Link to={`/products/${product.id}`}>
-                        <div className='product-image-container'>
+                        <div className='product-index-image'>
                             <img src={product.photo} />
                         </div>
-                        <div className='product-name'>
+                        <div className='product-index-name'>
                             <h1>{product.product_name}</h1>
                         </div>
-                        <h3>${product.price.toFixed(2)}</h3>
+                        <h3>${product.price}</h3>
                     </Link>
                 </li>
             );

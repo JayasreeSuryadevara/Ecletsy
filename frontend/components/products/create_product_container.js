@@ -3,7 +3,7 @@ import { createProduct } from '../../actions/product_actions';
 import ProductForm from './product_form';
 
 const mapStateToProps = (state, ownProps) => {
-    const vendorId = ownProps.match.params.productId;
+    const vendorId = ownProps.match.params.vendor_id;
     const product = {
             product_name: "",
             desc: "",

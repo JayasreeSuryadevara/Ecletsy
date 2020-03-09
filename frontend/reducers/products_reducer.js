@@ -6,7 +6,7 @@ import {
 
 const productsReducer = ( oldState = {}, action ) => {
 
-    Object.freeze(olsState);
+    Object.freeze(oldState);
 
     switch ( action.type ) {
         case RECEIVE_ALL_PRODUCTS:

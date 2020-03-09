@@ -2,12 +2,17 @@
 <html>
   <head>
     <title>Ecletsy</title>
+    <script src="https://kit.fontawesome.com/c133b6cbb9.js" crossorigin="anonymous"></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <script src="https://kit.fontawesome.com/c133b6cbb9.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      window.banner1Url = "<%= image_url('female-entpnr-hpg-1.jpg') %>";
+      window.banner2Url = "<%= image_url('home-ideas-hpg-1.jpg') %>";
+    </script>
   </head>
 
   <body>

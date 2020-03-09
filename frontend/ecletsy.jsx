@@ -17,13 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         store = configureStore();
     }
-
-    // React rendering
-    const rootElement = document.getElementById('root');
-    ReactDOM.render(<Root store={store} />, rootElement);
     
     //only for testing
     window.getState = store.getState;
     window.dispatch = store.dispatch;
+
+    // React rendering
+    const rootElement = document.getElementById('root');
+    ReactDOM.render(<Root store={store} />, rootElement);
 
 });
