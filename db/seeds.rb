@@ -12,7 +12,7 @@ Product.destroy_all
 Vendor.destroy_all
 
 # Seeds for users and users mapped as vendors 
-user1=User.create!(username: 'Demo User',password: 'password',email:"demo_user@text.com", address:"99 Street, Nine city, CA, 99999")
+user1=User.create!(username: 'Demo User',password: 'password',email:"demo_user@test.com", address:"99 Street, Nine city, CA, 99999")
 user2=User.create!(username: 'Jaya',password: 'password',email:"jaya@test.com", address:"address test 2")
 user3=User.create!(username: '11600-admin',password: 'password',email:"11600-admin@test.com", address:"address test 3")
 user4=User.create!(username: 'MPS-admin',password: 'password',email:"MPS-admin@test.com", address:"address test 3")
@@ -39,6 +39,13 @@ product8=Product.create!(product_name: 'OutdoorPillow1',price: '8.00',desc: 'Bei
 # Attaching images for the products from AWS bucket
 # file1 = File.open('s3://ecletsy-pro/product1-img.jpg')
 # product1.photo.attach(io: file1, filename: 'product1-img.jpg')
-  img_path = Rails.root.join('app', 'assets', 'images', 'product1-img.jpg' )
-  file = File.open(img_path)
-  product1.photo.attach(io: file, filename: 'product1-img.jpg')
+
+product1.photo.attach(io: File.open("app/assets/images/product1-img.jpg"), filename: 'product1-img.jpg')
+product2.photo.attach(io: File.open("app/assets/images/product2-img.jpg"), filename: 'product2-img.jpg')
+product3.photo.attach(io: File.open("app/assets/images/product3-img.jpg"), filename: 'product3-img.jpg')
+product4.photo.attach(io: File.open("app/assets/images/product4-img.jpg"), filename: 'product4-img.jpg')
+product5.photo.attach(io: File.open("app/assets/images/product5-img.jpg"), filename: 'product5-img.jpg')
+product6.photo.attach(io: File.open("app/assets/images/product6-img.jpg"), filename: 'product6-img.jpg')
+product7.photo.attach(io: File.open("app/assets/images/product7-img.jpg"), filename: 'product7-img.jpg')
+product8.photo.attach(io: File.open("app/assets/images/product8-img.jpg"), filename: 'product8-img.jpg')
+
