@@ -48,7 +48,7 @@ class ProductShow extends React.Component {
                     <div className="product-show-price">
                         <label> Price </label>
                         <br />
-                        <strong>${product.price}</strong>
+                        <strong>${product.price.toFixed(2)}</strong>
                     </div>
                     <div className="product-show-desc">
                         <label>Description </label>
@@ -61,6 +61,11 @@ class ProductShow extends React.Component {
                             {/* <button>to vendor page</button> */}
                         </div>
                     </div>
+                    {/* <div "product-show-buttons">
+                            <button className="product-show-cart-btn" onClick={this.props.addCartItem}>
+                                Add to Cart
+                            </button>
+                    </div> */}
                 </div>
             </div>
         )

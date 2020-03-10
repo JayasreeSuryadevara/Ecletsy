@@ -16,10 +16,10 @@ class ProductIndex extends React.Component {
                         <div className='product-index-image'>
                             <img src={product.image_url} />
                         </div>
-                        <div className='product-index-name'>
-                            <h1>{product.product_name}</h1>
+                        <div className="product-index-item-info">
+                            <div className="product-index-price">${product.price.toFixed(2)}</div>
+                            <div className="free-shipping-bar">FREE Shipping</div>
                         </div>
-                        <h3>${product.price}</h3>
                     </Link>
                 </li>
             );

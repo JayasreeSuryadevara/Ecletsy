@@ -1,5 +1,16 @@
+.hmpg-banner-level-1 {
+    max-width: 1402px;
+    text-align: center;
+    padding-top: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
+    float: none;
+    position: relative;
+    box-sizing: border-box;
+}
 .ecletsy-sale-heading {
     display: block;
+    color: #222;
     padding-top: 10px;
     padding-bottom: 12px;
     padding-left: 12px;
@@ -20,7 +31,12 @@
     }
 }
 .hmpg-banner-level-2 {
-    display: flex;
+    max-width: 1402px;
+    padding-top: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
+    position: relative;
+    display: block;
     margin: 0;
     height: 320px;
 }
@@ -39,7 +55,11 @@
     height: 100%;
 }
 .hmpg-banner-l2-main-box-info {
+    flex: 0 0 33%;
     height: 100%;
+    align-self: center !important;
+    vertical-align: middle;
+    box-sizing: border-box;
     padding-left: 18px;
     padding-bottom: 18px;
     padding-right: 18px;
@@ -51,7 +71,7 @@
     font-size: 14px;
     line-height: 1.4;
 }
-.hp-bn-l1-1 {
+.hp-bn-l2-1 {
     font-family: "Guardian-EgypTT",serif;
     font-stretch: wider;
     font-size: 26px;
@@ -60,34 +80,38 @@
     padding-bottom: 10px;
     -webkit-font-smoothing: antialiased;
 }
-.hp-bn-l1-2 {
+.hp-bn-l2-2 {
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
 }
-.hp-bn-l1-3 {
+.hp-bn-l2-3 {
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
 }
 .hmpg-banner-l2-main-tab-img {
     flex: 0 0 67%;
     display: block;
 }
 .hmpg-banner-l2-second-box {
-    flex: 0 0 33%;
+    flex: 00 33%;
+    position: relative;
+    padding-right: 18px;
     text-align: center;
     box-sizing: border-box;
+    text-align: left;
     display: flex !important;
     justify-content: center !important;
     flex-direction: column !important;
     font-size: 14px;
     line-height: 1.4;
-    height: 320px;
 }
 .hmpg-banner-l2-second-box-info {
+    display: flex;
     height: 222px;
     border: 1px solid #E1E3DF;
+    text-align: left;
+    align-items: top;
     border-radius: 4px;
-    position: relative;
     overflow: hidden;
     margin-left: 18px;
     margin-bottom: 18px;
@@ -95,6 +119,12 @@
     font-size: 18px;
     text-align: bottom;
     background: transparent;
+}
+.hmpg-banner-l2-second-box-img {
+    flex: 0 0 33%;
+    // position: relative;
+    display: block;
+    margin: 0;
 }
 .hmpg-banner-l2-third-box-info {
     background-color: #9fc062;
@@ -106,4 +136,55 @@
     margin-left: 18px;
     margin-bottom: 2px;
     cursor: pointer;
+}
+.hmpg-banner-level-3 {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.hmpg-banner3-part-1 {
+    font-family: "Graphik Webfont","Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: normal;
+    box-sizing: border-box;
+    text-align: center;
+}
+.hmpg-banner3-part-1  p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.hmpg-banner3-part-2 {
+    font-family: "Graphik Webfont","Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: normal;
+    box-sizing: border-box;
+    text-align: center;
+}
+.hmpg-banner3-part-2  p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.hmpg-banner3-part-3 {
+    font-family: "Graphik Webfont","Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: normal;
+    box-sizing: border-box;
+    text-align: center;
+}
+.hmpg-banner3-part-3  p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
 }

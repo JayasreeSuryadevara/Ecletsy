@@ -25,13 +25,13 @@ class HomePage extends React.Component{
                 <div className="hmpg-banner-level-2">
                     <div className="hmpg-banner-l2-main-tab" onClick={this.handleShowcaseVendor}>
                         <div className="hmpg-banner-l2-main-box-info">
-                            <span className="hp-bn-l1-1">
+                            <span className="hp-bn-l2-1">
                                  We’re celebrating fierce female entrepreneurs all month long.
                             </span>
-                            <span className="hp-bn-l1-2">
+                            <span className="hp-bn-l2-2">
                                 Celebrate Women's History
                             </span>
-                            <span className="hp-bn-l1-3">
+                            <span className="hp-bn-l2-3">
                                 Month >
                             </span>
                         </div>
@@ -40,8 +40,8 @@ class HomePage extends React.Component{
                         </div>
                     </div>
                     <div className="hmpg-banner-l2-second-box">
-                        <div className="hmpg-banner-l2-second-box-img">
-                            {/* <img src={window.banner2Url} /> */}
+                        {/* <div className="hmpg-banner-l2-second-box-img">
+                            <img src={window.banner2Url} />
                             <span className="hmpg-banner-l2-second-box-info">
                                 Ideas to make your home feel fresh.
                             </span>
@@ -51,10 +51,22 @@ class HomePage extends React.Component{
                             <span>
                                 Free shipping coming right up >
                             </span>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className="hmpg-banner-level-3">
+                    <div className="hmpg-banner3-part-1">
+                        <h3>Unique everything</h3>
+                        <p>We have millions of one-of-a-kind items, so you can find whatever you need (or really, really want).</p>
+                    </div>
+                    <div className="hmpg-banner3-part-1">
+                        <h3>Independent sellers</h3>
+                        <p>Buy directly from someone who put their heart and soul into making something special.</p>
+                    </div>
+                    <div className="hmpg-banner3-part-1">
+                        <h3>Secure shopping</h3>
+                        <p>We use best-in-class technology to protect your transactions.</p>
+                    </div>
                 </div>
             </div>
         );
