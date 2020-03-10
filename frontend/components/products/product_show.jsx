@@ -16,17 +16,17 @@ class ProductShow extends React.Component {
         // this.props.fetchVendor(this.props.match.params.vendorId);
     }
 
-    componentDidUpdate(prevProps) {
-        if (this.props.match.params.id !== prevProps.match.params.id) {
-            this.props.fetchProduct(this.props.match.params.id);
-            // this.props.fetchVendor(this.props.match.params.vendorId);
-        }
-    }
+    // componentDidUpdate(prevProps) {
+    //     if (this.props.match.params.id !== prevProps.match.params.id) {
+    //         this.props.fetchProduct(this.props.match.params.id);
+    //         // this.props.fetchVendor(this.props.match.params.vendorId);
+    //     }
+    // }
 
-    handleEdit(e) {
-        e.preventDefault();
-        this.props.history.push(`/products/${this.props.product.productId}/edit`);
-    }
+    // handleEdit(e) {
+    //     e.preventDefault();
+    //     this.props.history.push(`/products/${this.props.product.productId}/edit`);
+    // }
 
     render() {
         let { product } = this.props;
