@@ -41,12 +41,12 @@ class ProductShow extends React.Component {
     }
 
     render() {
-        let { product } = this.props;
+        let { product,vendor } = this.props;
         if (!product) {
             return <div>Loading...</div>;
         }
-        console.log("props in product show", this.props);
-        // const vendor = this.props.entities.vendors[product.vendor_id];
+        console.log("props in product show", vendor);
+        // const vendor = this.state.entities.vendors[product.vendor_id];
         return (
             <div className="product-show">
                 <div className="product-show-img">

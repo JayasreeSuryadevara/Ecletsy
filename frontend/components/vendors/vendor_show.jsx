@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductIndexcontainer from '../products/product_index_container';
+import VendorProductsContainer from './vendor_products';
 import CreateProductContainer from '../products/create_product_container';
 
 class VendorShow extends React.Component {
@@ -59,7 +59,10 @@ class VendorShow extends React.Component {
                 <div>
                     {/* { ( vendor.owner_id === currentUser.id ) ?  <CreateProductContainer /> : null } */}
                     {/* { loaded ? <ProductIndexcontainer products={this.state.vendor_products} /> : null } */}
-                    <ProductIndexcontainer products={Object.assign({},vendor.products)} /> 
+                    <VendorProductsContainer 
+                        products={Object.assign({},vendor.products)} 
+                        vendor_id={vendor.id} 
+                    /> 
                 </div>
             </div>
         )
