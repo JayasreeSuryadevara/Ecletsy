@@ -49,23 +49,25 @@ class VendorShow extends React.Component {
         console.log("vendor show", this.props);
         console.log("vendor-show",vendor);
         return (
-            <div className="vendor-show">
-                <div className="vendor-show-img">
-                    <img src={vendor.image_url} />
-                </div>
-                <div className="vendor-show-info">
-                    <h3> Name </h3>
-                    <br />
-                    <h3>{vendor.vendor_name}</h3>
-                    <br />
-                    <h3> Owner </h3>
-                    <br />
-                    <h3>{vendor.ownerName}</h3>
-                    <br />                    
-                    <h3> Email </h3>
-                    <br />
-                    <h3> {vendor.ownerEmail } </h3>
-                    <br />
+            <div className="vendor-show-main">
+                <div className="vendor-show">
+                    <div className="vendor-show-img">
+                        <img src={vendor.image_url} />
+                    </div>
+                    <div className="vendor-show-info">
+                        <h3> Name </h3>
+                        <br />
+                        <h3>{vendor.vendor_name}</h3>
+                        <br />
+                        <h3> Owner </h3>
+                        <br />
+                        <h3>{vendor.ownerName}</h3>
+                        <br />                    
+                        <h3> Email </h3>
+                        <br />
+                        <h3> {vendor.ownerEmail } </h3>
+                        <br />
+                    </div>
                 </div>
                 <div>
                     { this.state.vendor_owner ?  <CreateProductContainer vendorId={vendor.id} /> : null }
