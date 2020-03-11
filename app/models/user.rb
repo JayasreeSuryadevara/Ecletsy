@@ -27,7 +27,7 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
-  has_many :vendors,
+  has_one :vendor ,
     class_name: :Vendor,
     foreign_key: :owner_id
 

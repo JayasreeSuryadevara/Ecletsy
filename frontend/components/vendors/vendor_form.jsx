@@ -3,14 +3,19 @@ import React from 'react';
 class VendorForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props.store;
+        this.state = {
+            vendor_name: "",
+            owner_id: this.props.currentUser.id
+        }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
     }
 
     handleSubmit(event) {
         event.preventDefault();
-
+        const vendor = Object.assign({}, this.state);
+        this.props.createVendor(vendor);
+        this.props.history.push(`/vendors/${vendor.id}`);
     }
 
     update(field) {
@@ -31,49 +36,51 @@ class VendorForm extends React.Component {
     }
 
     render() {
-        const preview = this.state.image_url
-            ? <img src={this.state.image_url} />
-            : null;
+        // const preview = this.state.image_url
+        //     ? <img src={this.state.image_url} />
+        //     : null;
 
         let { errors } = this.props;
 
         return (
-            <form onSubmit={this.handleSubmit} className="vendor-form">
+            <div>
+                <form onSubmit={this.handleSubmit} className="vendor-form">
 
-                <div className="vendor-errors">
-                    {errors}
-                </div>
-
-                <div className="vendor-name">
-                    <label htmlFor="name">
-                        Name your Store
-                    </label>
-                    <br />
-
-                    <div className="vendor-name-input">
-                        <input
-                            required
-                            type="text"
-                            value={this.state.vendor_name}
-                            id="name"
-                            onChange={this.update('vendor_name')} />
+                    <div className="vendor-errors">
+                        {errors}
                     </div>
 
-                </div>
-                <br />
-                <div className="vendor-image-upload">
-                    <label htmlFor="vendor-image">Add your Store's logo here</label>
-                    <br />
+                    <div className="vendor-name">
+                        <label htmlFor="name">
+                            Name your Store
+                        </label>
+                        <br />
 
-                    <div className="image-preview">
-                        {preview}
+                        <div className="vendor-name-input">
+                            <input
+                                required
+                                type="text"
+                                value={this.state.vendor_name}
+                                id="name"
+                                onChange={this.update('vendor_name')} />
+                        </div>
+
                     </div>
+                    <br />
+                    {/* <div className="vendor-image-upload">
+                        <label htmlFor="vendor-image">Add your Store's logo here</label>
+                        <br />
 
-                    <input type="file" id="vendor-image" onChange={this.handleFile} />
-                </div>
+                        <div className="image-preview">
+                            {preview}
+                        </div>
 
-                <button className="vendor-create-btn">Save and continue</button>
-            </form>
+                        <input type="file" id="vendor-image" onChange={this.handleFile} />
+                    </div> */}
+
+                    <button className="vendor-create-btn">Save and continue</button>
+                </form>
+            </div>
         )
     }
 }

@@ -5,10 +5,10 @@ import { fetchVendor } from '../../actions/vendor_actions';
 import { fetchAllUsers } from '../../actions/user_actions';
 
 const mapStateToProps = (state, ownProps) => {
-    console.log("state in vsc", state);
-    console.log("ownprops in VSC", ownProps);
-    const currentUser = state.session.currentUser;
+    const currentUser = state.entities.users[state.session.id];
     const vendor = state.entities.vendors[ownProps.match.params.id];
+    console.log("currentUser in vendor show", currentUser);
+    console.log("vendor in vendor show", vendor);
     return {
         currentUser,
         vendor

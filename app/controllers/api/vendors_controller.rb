@@ -1,6 +1,6 @@
 class Api::VendorsController < ApplicationController
 
-  before_action :require_login, only: [:create, :update, :destroy]
+  before_action :require_logged_in, only: [:create, :update]
 
   def show
     @vendor = Vendor.find(params[:id])

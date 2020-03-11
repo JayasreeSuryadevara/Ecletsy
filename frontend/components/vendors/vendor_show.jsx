@@ -1,4 +1,5 @@
 import React from 'react';
+import { getCurrentUserId } from '../../util/helpers_util';
 import VendorProductsContainer from './vendor_products';
 import CreateProductContainer from '../products/create_product_container';
 
@@ -7,31 +8,45 @@ class VendorShow extends React.Component {
         super(props);
         this.state = {
             vendor_products: [],
+            vendor_owner: false,
             loaded: false
         }
         this.fetchVendorsProducts = this.fetchVendorsProducts.bind(this);
     }
 
     componentDidMount() {
-        this.props.fetchVendor(this.props.match.params.id);
-        // this.props.fetchAllUsers();
-        // this.fetchVendorsProducts(this.props.match.params.id);
-    }
+        this.props.fetchVendor(this.props.match.params.id)
+            .then(payload => {
+                const { vendor} = payload;
+                console.log("props",this.props);
+                const currentUserId = getCurrentUserId(this.props.currentUser);
+                console.log("vendor in promise", vendor);
+                console.log("currentUser Id", currentUserId);
+                debugger;
+                vendor.owner_id === currentUserId ? 
+                    this.state.vendor_owner = true : 
+                    this.state.vendor_owner = false
+            })
 
-    fetchVendorsProducts(vendorId) {
-        const { products } = this.props.fetchProducts();
-        console.log("products", products);
-        // products.map(product => {
-        //     if (product.vendor_id === vendorId){
-        //         this.state.vendor_products.push(product);
-        //         loaded = true;
-        //     }
-        // });
-        // this.setState({[vendor_products]: vendor_products})
-    }
-
+            // this.props.fetchAllUsers();
+            // this.fetchVendorsProducts(this.props.match.params.id);
+        }
+        
+        fetchVendorsProducts(vendorId) {
+            const { products } = this.props.fetchProducts();
+            console.log("products", products);
+            // products.map(product => {
+                //     if (product.vendor_id === vendorId){
+                    //         this.state.vendor_products.push(product);
+                    //         loaded = true;
+                    //     }
+                    // });
+                    // this.setState({[vendor_products]: vendor_products})
+                }
+                
     render() {
         let { vendor, currentUser } = this.props;
+        console.log("vendor_owner", this.state.vendor_owner);
         if (!vendor) {
             return <div>Loading...</div>;
         }
@@ -57,7 +72,7 @@ class VendorShow extends React.Component {
                     <br />
                 </div>
                 <div>
-                    {/* { ( vendor.owner_id === currentUser.id ) ?  <CreateProductContainer /> : null } */}
+                    { this.state.vendor_owner ?  <CreateProductContainer vendorId={vendor.id} /> : null }
                     {/* { loaded ? <ProductIndexcontainer products={this.state.vendor_products} /> : null } */}
                     <VendorProductsContainer 
                         products={Object.assign({},vendor.products)} 
