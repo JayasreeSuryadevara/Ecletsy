@@ -7,13 +7,7 @@ class Api::VendorsController < ApplicationController
 
     render :show
   end
-
-  def index
-    @vendors = Vendor.all
-
-    render :index
-  end
-
+  
   def create
 
     @vendor = Vendor.new(vendor_params)

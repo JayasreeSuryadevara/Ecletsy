@@ -9,6 +9,8 @@ class HomePage extends React.Component{
     }
 
     componentDidMount() {
+        this.props.fetchAllUsers();
+        this.props.fetchVendors();
         this.props.fetchProducts().then(products => {
             this.setState({ isLoaded: true });
         });

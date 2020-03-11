@@ -9,6 +9,9 @@ import NoMatchPage from '../components/homepage/no_match_page';
 import SignUpFormContainer from './session/signup_form_container';
 import LogInFormContainer from './session/login_form_container';
 import ProductShowContainer from '../components/products/product_show_container';
+import CreateProductContainer from '../components/products/create_product_container';
+import EditProductContainer from '../components/products/edit_product_container';
+import VendorShowContainer from '../components/vendors/vendor_show_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -28,6 +31,9 @@ const App = () => (
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             <Route exact path="/products/:id" component={ProductShowContainer} />
+            <ProtectedRoute exact path="/vendors/:vendor_id/products" component={CreateProductContainer} />
+            <ProtectedRoute exact path="/vendors/:vendor_id/products/:id" component={EditProductContainer} />
+            <Route exact path="/vendors/:id" component={VendorShowContainer} />
             <Route component={NoMatchPage} />
         </Switch>
     </div>

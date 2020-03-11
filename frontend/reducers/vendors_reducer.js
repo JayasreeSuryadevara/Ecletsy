@@ -1,24 +1,19 @@
 import {
     RECEIVE_ALL_VENDORS,
-    RECEIVE_VENDOR,
-    REMOVE_VENDOR
-} from "../actions/store_actions";
+    RECEIVE_VENDOR
+} from "../actions/vendor_actions";
 
 const vendorsReducer = (oldState = {}, action) => {
     
     Object.freeze(oldState);
 
     switch (action.type) {
+
         case RECEIVE_ALL_VENDORS:
             return Object.assign({}, action.vendors);
 
         case RECEIVE_VENDOR:
-            return Object.assign({}, oldState, { [action.vendors.id]: action.vendors });
-
-        case REMOVE_VENDOR:
-            let newState = Object.assign({}, oldState);
-            delete newState[action.vendorId];
-            return newState;
+            return Object.assign({}, oldState, { [action.vendor.id]: action.vendor });
 
         default:
             return oldState;

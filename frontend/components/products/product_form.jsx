@@ -44,7 +44,7 @@ class ProductForm extends React.Component {
                         <h2 className="product-form-title"> {this.props.formTitle} </h2>
                     </div>
                     <br />
-                    {/* {this.renderErrors()} */}
+                    {this.renderErrors()}
                     <br />
                     <div className="product-form">
                         <br />
@@ -90,6 +90,7 @@ class ProductForm extends React.Component {
     }
 }
 
+export default ProductForm;
 // var searchNames = ['Sydney', 'Melbourne', 'Brisbane',
 //     'Adelaide', 'Perth', 'Hobart'];
 // //...
