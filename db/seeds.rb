@@ -25,6 +25,7 @@ vendor1=Vendor.create!(vendor_name: 'ELEVEN600',owner_id: user3.id)
 vendor2=Vendor.create!(vendor_name: 'Crafty Jewelry',owner_id: user6.id)
 vendor3=Vendor.create!(vendor_name: 'MP Studio',owner_id: user4.id)
 vendor4=Vendor.create!(vendor_name: 'Supplies', owner_id: user2.id)
+vendor5=Vendor.create!(vendor_name: 'Demo Store', owner_id: user1.id)
 
 # Seeds for products 
 product1=Product.create!(product_name: 'Linen Tea Towel',price: '12.82',desc: 'Linen Dish Towel - Towel with Hook',vendor_id: vendor1.id)
@@ -52,3 +53,4 @@ product8.photo.attach(io: File.open("app/assets/images/product8-img.jpg"), filen
 
 # Attaching images to vendor
 vendor1.photo.attach(io: File.open("app/assets/images/home-ideas-hpg-1.jpg"), filename: 'home-ideas-hpg-1.jpg')
+vendor5.photo.attach(io: File.open("app/assets/images/DemoUserShop.jpg"), filename: 'DemoUserShop.jpg')
