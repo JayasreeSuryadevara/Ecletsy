@@ -1,9 +1,13 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { createProduct } from '../../actions/product_actions';
 import ProductForm from './product_form';
 
-const mapStateToProps = (state, ownProps) => {
-    const vendorId = ownProps.match.params.vendor_id;
+const mapStateToProps = ({ session, entities: { users, vendors } }) => {
+    const currentUser = users[session.id];
+    console.log("currentUser", currentUser);
+    const vendorId = currentUser.vendorId;
+    console.log("vendorId in cntainer", vendorId);
     const product = {
             product_name: "",
             desc: "",
@@ -11,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
             vendor_id: vendorId
         }
     return {
-        errors: state.errors.product,
+        // errors: state.errors.product,
         formType: 'create',
         formTitle: 'Add a new Product',
         buttonType: 'Create Product',
@@ -21,8 +25,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        action: product = dispatch(createProduct(product))
+        action: product => dispatch(createProduct(product))
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ProductForm));

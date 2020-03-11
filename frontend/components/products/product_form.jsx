@@ -4,7 +4,7 @@ class ProductForm extends React.Component {
 
     constructor(props){
         super(props);
-
+        this.state = this.props.product;
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
 
@@ -23,7 +23,13 @@ class ProductForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const product = Object.assign({}, this.state);
-        this.props.action(product);
+        console.log("product", product);
+        debugger;
+        this.props.action(product).then(payload => {
+            const { product } = payload;
+            console.log("props in product form", this.props);
+            this.props.history.push(`/products/${product.id}`);
+        })
     }
 
     renderErrors() {
@@ -37,6 +43,7 @@ class ProductForm extends React.Component {
     }
 
     render(){
+        const { product } = this.props;
         return(
             <div>
                 <form className="product-create-update-form" onSubmit={this.handleSubmit}>
@@ -58,7 +65,7 @@ class ProductForm extends React.Component {
                         <br />
                         <label>Desc</label>
                         <br />
-                        <textarrea required 
+                        <textarea required 
                             rows="5"
                             cols="30"
                             value={this.state.desc}

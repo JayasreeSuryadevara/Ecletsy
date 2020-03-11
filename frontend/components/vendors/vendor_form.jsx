@@ -61,7 +61,6 @@ class VendorForm extends React.Component {
                                 required
                                 type="text"
                                 value={this.state.vendor_name}
-                                id="name"
                                 onChange={this.update('vendor_name')} />
                         </div>
 

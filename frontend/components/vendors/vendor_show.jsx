@@ -18,14 +18,10 @@ class VendorShow extends React.Component {
         this.props.fetchVendor(this.props.match.params.id)
             .then(payload => {
                 const { vendor} = payload;
-                console.log("props",this.props);
                 const currentUserId = getCurrentUserId(this.props.currentUser);
-                console.log("vendor in promise", vendor);
-                console.log("currentUser Id", currentUserId);
-                debugger;
                 vendor.owner_id === currentUserId ? 
-                    this.state.vendor_owner = true : 
-                    this.state.vendor_owner = false
+                    this.setState({vendor_owner: true}) : 
+                    null
             })
 
             // this.props.fetchAllUsers();

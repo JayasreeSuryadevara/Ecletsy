@@ -26,7 +26,7 @@ export const updateProduct = (product) => {
 export const createProduct = (product) => {
     return $.ajax({
         method: "POST",
-        url: `api/products`,
+        url: `/api/vendors/${product.vendor_id}/products`,
         data: { product }
     });
 }
