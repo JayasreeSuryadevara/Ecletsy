@@ -24,7 +24,6 @@ class ProductForm extends React.Component {
         e.preventDefault();
         const product = Object.assign({}, this.state);
         console.log("product", product);
-        debugger;
         this.props.action(product).then(payload => {
             const { product } = payload;
             console.log("props in product form", this.props);

@@ -5,6 +5,9 @@ class ProductShow extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            loaded: false
+        }
         this.renderRating = this.renderRating.bind(this);
         this.addToCart = this.addToCart.bind(this);
         this.userProfile = this.userProfile.bind(this);
@@ -15,6 +18,7 @@ class ProductShow extends React.Component {
         .then(result => {
             const product = result.product;
             this.props.fetchVendor(product.vendor_id);
+            this.setState({loaded: true})
         });
     }
 
@@ -69,11 +73,13 @@ class ProductShow extends React.Component {
                         {product.desc}
                     </div>
                     <div className="product-show-vendor-info">
-                        <div className="product-show-vendor-info-box">
-                            <p>Try other products from </p>
-                            <Link to={`/vendors/${product.vendor_id}`}>{product.vendor_id}</Link> 
-                            {/* <Link to={`/vendors/${product.vendor_id}`}>{vendor.vendor_name}</Link>  */}
-                        </div>
+                        { this.state.loaded ? 
+                            <div className="product-show-vendor-info-box">
+                                <p>Try other products from </p>
+                                <Link to={`/vendors/${product.vendor_id}`}>{vendor.vendor_name}</Link> 
+                            </div> :
+                            null
+                        }
                     </div>
                     {/* <div "product-show-addCart-btn">
                             <button className="product-show-cart-btn" onClick={this.props.addToCart}>
