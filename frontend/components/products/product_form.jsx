@@ -87,7 +87,7 @@ class ProductForm extends React.Component {
                             className="product-form-input"
                         />
                         <br />
-                        <label>Desc</label>
+                        <label>Description</label>
                         <br />
                         <textarea required 
                             rows="5"

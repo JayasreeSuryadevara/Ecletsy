@@ -6,6 +6,29 @@
     display: flex;
     justify-content: center;
     align-items: stretch;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.product-form > input {
+    min-width: 50px;
+    min-height: 26px;
+    margin-bottom: 10px;
+}
+.product-image-upload{
+    margin-top: 10px;
+}
+#product-image {
+    font-size: 16px;
+}
+.product_button_submit {
+    background-color: #eee;
+    border-radius: 40px;
+    width: 200px;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 18px;
+    text-align: center;
 }
 .product-action-title {
     padding: 18px;
