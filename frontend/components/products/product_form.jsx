@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class ProductForm extends React.Component {
 
@@ -123,6 +123,11 @@ class ProductForm extends React.Component {
                                 value={this.props.buttonType}
                                 className="product_button_submit" 
                             />
+                        </div>
+                        <div className="return-to-vendor-page">
+                            <Link to={`/vendors/${this.state.vendor_id}`} className="return-to-vendor-page"> 
+                                Return to Vendor Page 
+                            </Link>
                         </div>
                     </div>
                 </form>

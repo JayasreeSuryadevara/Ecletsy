@@ -43,10 +43,15 @@
 }
 .login-signup {
   padding-right: 60px;
-}.logged-bar-container {
+}
+.logged-bar-container {
   display: flex;
   justify-content: space-between;
 }
 .navbar-store-icon {
-  padding: 10px;
+  cursor: pointer;
+  padding-right: 10px;
+}
+.navbar-seller {
+  padding: none;
 }
