@@ -32,5 +32,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def createCart(user)
+    cart = ShoppingCart.new
+    cart[:user_id] = user.id
+    cart[:resolved] = false
+    cart.save
+  end
 end
 

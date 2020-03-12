@@ -6,16 +6,23 @@ import { fetchVendor } from '../../actions/vendor_actions';
 const mapStateToProps = (state, ownProps) => {
     const productId = ownProps.match.params.id;
     const product = state.entities.products[productId];
+    let currentUser;
     let vendor;
+    if (state.session.id){
+        currentUser = state.entities.users[state.session.id];
+    } else {
+        currentUser = "";
+    }
     if (product){
         vendor = product.vendor;
     } else {
         vendor = { vendor_name: "" }
     }
-    console.log("vendor in ps-c", vendor);
+    console.log("vendor in ps-c", vendor);  
     return {
         product,
-        vendor
+        vendor,
+        currentUser
     };
 }
 

@@ -35,7 +35,7 @@ const App = () => (
             <Route exact path="/products/:id" component={ProductShowContainer} />
             <ProtectedRoute exact path="/vendors/:vendor_id/products" component={CreateProductContainer} />
             <ProtectedRoute exact path="/vendors/:vendor_id/products/:id" component={EditProductContainer} />
-            <ProtectedRoute exact path="/products/:product_id/cart_items" component={ShoppingCartContainer} />
+            <ProtectedRoute exact path="/shopping_cart" component={ShoppingCartContainer} />
             <ProtectedRoute exact path="/vendors" component={CreateVendorContainer} />
             <Route exact path="/vendors/:id" component={VendorShowContainer} />
             <Route component={NoMatchPage} />

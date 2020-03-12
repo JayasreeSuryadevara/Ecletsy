@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createShoppingCart } from '../../actions/shopping_cart_actions';
-import { createCartItem } from '../../actions/cart_items_actions';
+import { withRouter } from 'react-router-dom';
+import { createShoppingCart,fetchShoppingCart } from '../../actions/shopping_cart_actions';
+import { createCartItem, updateCartItem } from '../../actions/cart_items_actions';
+import { enableModal } from '../../actions/modal_actions';
 
 class CartItem extends React.Component {
 
@@ -21,25 +23,22 @@ class CartItem extends React.Component {
 
     handleAddItem(e){
         e.preventDefault();
-        if (!this.props || !this.props.currentUser) {
-            alert('Please Log in or Sign up');
+        if (!this.props.currentUser) {
+            this.props.enableModal()
         } else {
-            const cart = {
-                user_id: this.props.currentUser.id,
-                resolved: false
-            }
-
-            this.props.createShoppingCart(cart).then(cart => {
+            if(!this.props.cartItem){
+                const cartId = this.props.cart.id;
                 const cartItem = {
                     product_id: this.state.product_id,
-                    cart_id: cart.id,
+                    cart_id: cartId,
                     quantity: this.state.quantity
                 }
-                this.props.createCartItem(cartItem)
-            });
+                this.props.createCartItem(cartItem);
+                this.props.history.push(`/shopping_cart`);
+            } else {
+                alert('You already have this item in your cart!');
+            }
         }
-        console.log("props",this.props);
-        console.log("state", this.state);
     };
 
     render(){
@@ -87,12 +86,16 @@ class CartItem extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users[state.session.id],
+    cart: state.entities.users[state.session.id].cart
 });
 
 const mapDispatchToProps = dispatch => ({
     createShoppingCart: cart => dispatch(createShoppingCart(cart)),
-    createCartItem: cartItem => dispatch(createCartItem(cartItem))
+    createCartItem: cartItem => dispatch(createCartItem(cartItem)),
+    updateCartItem: cartItem => dispatch(updateCartItem(cartItem)),
+    fetchShoppingCart: user => dispatch(fetchShoppingCart(user)),
+    enableModal: (mode) => dispatch(enableModal(mode))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CartItem);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartItem));

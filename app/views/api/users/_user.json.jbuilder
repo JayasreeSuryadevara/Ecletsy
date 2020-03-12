@@ -8,6 +8,6 @@ if user
     end
     if user == current_user
         json.vendor user.vendor
-        # json.hasLineItems user.line_items.length > 0
+        json.cart user.cart
     end
 end

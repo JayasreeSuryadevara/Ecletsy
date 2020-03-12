@@ -1,9 +1,3 @@
-export const fetchShoppingCart = (userId) => {
-    return $.ajax({
-        method: "GET",
-        url: `api/shopping_cart`
-    })
-}
 export const createShoppingCart = (shopping_cart) => {
 
     return $.ajax({

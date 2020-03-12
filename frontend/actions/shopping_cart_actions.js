@@ -16,10 +16,6 @@ const removeShoppingCart = (shoppingCartId) => {
     }
 };
 
-export const fetchShoppingCart = (user) => (dispatch) => {
-    return APIUtil.fetchShoppingCart(user)
-        .then((shopping_cart) => dispatch(receiveShoppingCart(shopping_cart)))
-};
 export const createShoppingCart = (shopping_cart) => (dispatch) => {
     return APIUtil.createShoppingCart(shopping_cart)
         .then((shopping_cart) => dispatch(receiveShoppingCart(shopping_cart)))

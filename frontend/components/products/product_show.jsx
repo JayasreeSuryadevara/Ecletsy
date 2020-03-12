@@ -74,7 +74,7 @@ class ProductShow extends React.Component {
                         {product.desc}
                     </div>
                     <br />
-                    <CartItem product={product} />
+                        {this.props.currentUser ? <CartItem product={product} /> : null} 
                     <br />
                     <div className="product-show-vendor-info">
                         { this.state.loaded ? 
@@ -87,6 +87,7 @@ class ProductShow extends React.Component {
                             null
                         }
                     </div>
+                    <br />
                     <div>
                         <Link to="/" className="return-to-home"> Return to Home Page </Link>
                     </div>

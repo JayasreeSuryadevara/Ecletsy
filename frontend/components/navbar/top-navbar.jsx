@@ -10,7 +10,6 @@ class TopNavBar extends React.Component {
 
     toVendorOwnerPage(e) {
         e.preventDefault();
-        console.log("props in topnavbar", this.props);
         let { vendorId } = this.props;
         const storeLink = vendorId ? `/vendors/${vendorId}` : "/vendors";
         this.props.history.push(storeLink);
@@ -18,7 +17,8 @@ class TopNavBar extends React.Component {
 
     toShoppingCartPage(e) {
         e.preventDefault();
-        
+        debugger;
+        this.props.history.push(`/shopping_cart`)
     }
 
     loggedin_navbar() {
