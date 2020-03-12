@@ -25,6 +25,10 @@ class Product < ApplicationRecord
     belongs_to :vendor,
         class_name: :Vendor,
         foreign_key: :vendor_id
+    
+    has_many :cart_items,
+        class_name: :CartItem,
+        foreign_key: :product_id
         
     has_one_attached :photo
 end

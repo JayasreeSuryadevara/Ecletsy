@@ -5,6 +5,7 @@ class TopNavBar extends React.Component {
     constructor(props){
         super(props);
         this.toVendorOwnerPage = this.toVendorOwnerPage.bind(this);
+        this.toShoppingCartPage = this.toShoppingCartPage.bind(this);
     }
 
     toVendorOwnerPage(e) {
@@ -15,21 +16,26 @@ class TopNavBar extends React.Component {
         this.props.history.push(storeLink);
     }
 
+    toShoppingCartPage(e) {
+        e.preventDefault();
+        
+    }
+
     loggedin_navbar() {
         return (
             <div className="logged-bar-container">
 
                 <div className="navbar-store-icon" onClick={this.toVendorOwnerPage}>
-                    <i class="fas fa-store"></i>
+                    <i class="fas fa-store fa-2x"></i>
                     <p className="navbar-seller">Seller</p>
                 </div>
 
                 <GreetingContainer />
-{/* 
-                <div className="shopping-cart">
-                    <i class="fas fa-cart-arrow-down"></i>
+
+                <div className="shopping-cart" onClick={this.toShoppingCartPage}>
+                    <i class="fas fa-cart-arrow-down fa-2x"></i>
                 </div>
-                 */}
+                
             </div>
         );
     };
@@ -39,6 +45,9 @@ class TopNavBar extends React.Component {
         return (
             <div className="logged-bar-container">
                 <GreetingContainer />
+                <div className="shopping-cart" onClick={this.toShoppingCartPage}>
+                    <i class="fas fa-cart-arrow-down fa-2x"></i>
+                </div>
             </div>
         );
     };

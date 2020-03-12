@@ -50,8 +50,19 @@
 }
 .navbar-store-icon {
   cursor: pointer;
-  padding-right: 10px;
+  padding-right: 18px;
 }
 .navbar-seller {
   padding: none;
 }
+.shopping-cart {
+  display: flex;
+  padding-right: 20px;
+  align-items: center;
+  min-height: 40px !important;
+  min-width: 40px !important;
+  cursor: pointer;
+}
+.shopping-cart:hover {
+    background: #eee;
+  }

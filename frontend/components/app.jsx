@@ -13,6 +13,7 @@ import CreateProductContainer from '../components/products/create_product_contai
 import EditProductContainer from '../components/products/edit_product_container';
 import CreateVendorContainer from '../components/vendors/create_vendor_container';
 import VendorShowContainer from '../components/vendors/vendor_show_container';
+import ShoppingCartContainer from '../components/shopping_cart/shopping_cart_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -34,6 +35,7 @@ const App = () => (
             <Route exact path="/products/:id" component={ProductShowContainer} />
             <ProtectedRoute exact path="/vendors/:vendor_id/products" component={CreateProductContainer} />
             <ProtectedRoute exact path="/vendors/:vendor_id/products/:id" component={EditProductContainer} />
+            <ProtectedRoute exact path="/products/:product_id/cart_items" component={ShoppingCartContainer} />
             <ProtectedRoute exact path="/vendors" component={CreateVendorContainer} />
             <Route exact path="/vendors/:id" component={VendorShowContainer} />
             <Route component={NoMatchPage} />

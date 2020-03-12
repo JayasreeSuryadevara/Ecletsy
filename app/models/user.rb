@@ -27,10 +27,13 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
-  has_one :vendor ,
+  has_one :vendor,
     class_name: :Vendor,
     foreign_key: :owner_id
 
+  has_one :cart,
+    class_name: :ShoppingCart,
+    foreign_key: :user_id
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)

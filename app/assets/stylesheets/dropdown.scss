@@ -1,5 +1,5 @@
 .dropdown-main {
-    padding-right: 60px;
+    padding-right: 18px;
 }
 .dropdown-main:hover .user-profile-dropdown-menu {
     display: block;
@@ -17,20 +17,6 @@
     border-radius: 40px;
     cursor: pointer;
 }
-// .dropdown-button-profile-pic {
-//     display: block;
-//     padding: 10px;
-//     height: 30px;
-//     width: 30px;
-//     align-items: center;
-// }
-// .user-icon-down-arrow {
-//     display: block;
-//     height: 30px;
-//     width: 30px;
-//     align-items: center;
-//     flex-direction: row;
-// }
 .user-profile-dropdown-menu {
     display: none;
     position: absolute;

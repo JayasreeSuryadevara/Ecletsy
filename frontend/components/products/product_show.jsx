@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CartItem from '../cart_item/cart_item';
 
 class ProductShow extends React.Component {
 
@@ -72,6 +73,9 @@ class ProductShow extends React.Component {
                         <br />
                         {product.desc}
                     </div>
+                    <br />
+                    <CartItem product={product} />
+                    <br />
                     <div className="product-show-vendor-info">
                         { this.state.loaded ? 
                             <div className="product-show-vendor-info-box">
