@@ -76,10 +76,15 @@ class ProductShow extends React.Component {
                         { this.state.loaded ? 
                             <div className="product-show-vendor-info-box">
                                 <p>Try other products from </p>
-                                <Link to={`/vendors/${product.vendor_id}`}>{vendor.vendor_name}</Link> 
+                                <div className="product-show-vendor-link">
+                                    <Link to={`/vendors/${product.vendor_id}`}>{vendor.vendor_name}</Link> 
+                                </div>
                             </div> :
                             null
                         }
+                    </div>
+                    <div>
+                        <Link to="/" className="return-to-home"> Return to Home Page </Link>
                     </div>
                     {/* <div "product-show-addCart-btn">
                             <button className="product-show-cart-btn" onClick={this.props.addToCart}>

@@ -10,3 +10,32 @@
 .product-action-title {
     padding: 18px;
 }
+.add-product-link {
+    background-color: #9fc062;
+    color: black;
+    border-radius: 40px;
+    width: 200px;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+}
+.return-to-home {
+    background-color: #eee;
+    border-radius: 40px;
+    width: 200px;
+    padding-top: 10px;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.vendor-show-btns {
+    display:flex;
+    flex-direction: column;
+}
+.vendor-show-btns > span {
+    padding: 18px;
+    text-align: center;
+}

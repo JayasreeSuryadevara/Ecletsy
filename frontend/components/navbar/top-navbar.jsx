@@ -25,6 +25,11 @@ class TopNavBar extends React.Component {
                 </div>
 
                 <GreetingContainer />
+{/* 
+                <div className="shopping-cart">
+                    <i class="fas fa-cart-arrow-down"></i>
+                </div>
+                 */}
             </div>
         );
     };

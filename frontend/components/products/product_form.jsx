@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class ProductForm extends React.Component {
 
@@ -6,6 +7,7 @@ class ProductForm extends React.Component {
         super(props);
         this.state = this.props.product;
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleFile = this.handleFile.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
 
     }
@@ -22,13 +24,35 @@ class ProductForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const product = Object.assign({}, this.state);
-        console.log("product", product);
-        this.props.action(product).then(payload => {
+        const formData = new FormData();
+
+        formData.append('product[product_name]', this.state.product_name);
+        formData.append('product[desc]', this.state.desc);
+        formData.append('product[price]', this.state.price);
+        formData.append('product[vendor_id]', this.state.vendor_id);
+
+        if (this.state.imageFile) {
+            formData.append('product[photo]', this.state.imageFile);
+        }
+
+        this.props.action(formData).then(payload => {
+            console.log("payload in product form", payload);
             const { product } = payload;
-            console.log("props in product form", this.props);
             this.props.history.push(`/products/${product.id}`);
         })
+    }
+    
+    handleFile(e) {
+        const reader = new FileReader();
+        const file = e.currentTarget.files[0];
+        reader.onloadend = () =>
+            this.setState({ imageUrl: reader.result, imageFile: file });
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            this.setState({ imageUrl: "", imageFile: null });
+        }
     }
 
     renderErrors() {
@@ -43,6 +67,7 @@ class ProductForm extends React.Component {
 
     render(){
         const { product } = this.props;
+        const preview = this.state.imageUrl ? <img src={this.state.imageUrl} /> : null;
         return(
             <div>
                 <form className="product-create-update-form" onSubmit={this.handleSubmit}>
@@ -83,6 +108,16 @@ class ProductForm extends React.Component {
                             className="product-form-input"
                         />
                         <br />
+                        <div className="product-image-upload">
+                            <label htmlFor="product-image">Load your Product's image here</label>
+                            <br />
+                            <div className="preview-image">
+                                {preview}
+                            </div>
+                            <br />
+                            <input type="file" id="product-image" onChange={this.handleFile} />
+                        </div>
+                        <br />
                         <div className="product_button_container">
                             <input type="submit"
                                 value={this.props.buttonType}
@@ -96,14 +131,4 @@ class ProductForm extends React.Component {
     }
 }
 
-export default ProductForm;
-// var searchNames = ['Sydney', 'Melbourne', 'Brisbane',
-//     'Adelaide', 'Perth', 'Hobart'];
-// //...
-// <DropdownInput
-//     options={searchNames}
-//     defaultValue={this.props.initialValue}
-//     menuClassName='dropdown-input'
-//     onSelect={this.handleSelectName}
-//     placeholder='Search...'
-// />
+export default withRouter(ProductForm);

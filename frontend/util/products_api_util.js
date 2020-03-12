@@ -23,10 +23,12 @@ export const updateProduct = (product) => {
         data: { product }
     });
 }
-export const createProduct = (product) => {
+export const createProduct = formData => {
     return $.ajax({
         method: "POST",
-        url: `/api/vendors/${product.vendor_id}/products`,
-        data: { product }
+        url: `/api/vendors/${formData.get('product[vendor_id]')}/products`,
+        data: formData,
+        contentType: false,
+        processData: false
     });
 }

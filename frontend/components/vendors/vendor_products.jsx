@@ -32,8 +32,19 @@ class VendorProductIndex extends React.Component {
     }
 };
 
-const mapStateToProps = (state) => {
-    const products = state.entities.vendors[state.vendor_id]
+const mapStateToProps = state => {
+    const currentUser = state.entities.users[state.session.id];
+    let vendor;
+    let products;
+    if (currentUser) {
+        vendor = state.entities.vendors[currentUser.vendorId];
+        products = Object.assign({}, vendor.products);
+    } else {
+        products = state.entities.vendors[state.vendor_id]
+    }
+    console.log("currentUser in vendor products", currentUser);
+    console.log("vendor in vendor products", vendor);
+
     return(products);
 }
 
