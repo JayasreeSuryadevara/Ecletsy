@@ -110,8 +110,8 @@ class HomePage extends React.Component{
                 <div className="wave-box">
                     <p> Created by Jayasree Suryadevara </p>
                     <div>
-                        <Link to="https://github.com/JayasreeSuryadevara/Ecletsy"><i class="fab fa-github fa-3x"></i></Link>
-                        <Link to="https://www.linkedin.com/in/jayasree-suryadevara-98066415/"><i class="fab fa-linkedin fa-3x"></i></Link>
+                        <a href="https://github.com/JayasreeSuryadevara/Ecletsy" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+                        <a href="https://www.linkedin.com/in/jayasree-suryadevara-98066415/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
                     </div>
                 </div>
             </div>

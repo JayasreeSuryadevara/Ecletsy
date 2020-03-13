@@ -51,11 +51,11 @@
     div {
         padding: 10px;
     }
-}
-a:link {
-    color: whitesmoke;
-    padding-left: 20px;
-    text-align: center;
+    a {
+        color: whitesmoke !important;
+        padding-left: 20px;
+        text-align: center;
+    }
 }
 .hmpg {
     display: flex;

@@ -5,9 +5,7 @@ import ProductForm from './product_form';
 
 const mapStateToProps = ({ session, entities: { users, vendors } }) => {
     const currentUser = users[session.id];
-    console.log("currentUser", currentUser);
     const vendorId = currentUser.vendorId;
-    console.log("vendorId in cntainer", vendorId);
     const product = {
             product_name: "",
             desc: "",

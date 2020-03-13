@@ -17,7 +17,6 @@ class TopNavBar extends React.Component {
 
     toShoppingCartPage(e) {
         e.preventDefault();
-        debugger;
         this.props.history.push(`/shopping_cart`)
     }
 

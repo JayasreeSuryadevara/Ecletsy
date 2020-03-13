@@ -12,8 +12,4 @@ const mapStateToProps = ({ session, entities: { users } }) => {
     }
 };
 
-const mapDispatchToProps = dispatch => ({
-
-});
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Navbar));
+export default withRouter(connect(mapStateToProps, null)(Navbar));

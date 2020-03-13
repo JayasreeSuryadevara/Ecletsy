@@ -28,8 +28,5 @@ const BottomNavBar = ({ currentUser }) => {
 const mapStateToProps = ({ session, entities: { users } }) => ({
     currentUser: users[session.id]
 });
-const mapDispatchToProps = dispatch => ({
-    
-});
 
-export default connect(mapStateToProps, mapDispatchToProps)(BottomNavBar);
+export default connect(mapStateToProps, null)(BottomNavBar);
