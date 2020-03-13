@@ -1,0 +1,27 @@
+.shopping-cart-show {
+    padding: 30px;
+    font-size: 30px;
+    button {
+        width: 200px;
+        height: 40px;
+        color:black;
+        background-color: lightslategrey;
+        font-size: large;
+        font-weight: bold;
+    }
+    ul {
+        list-style: none;
+    }
+    label {
+        padding-right: 20px;
+    }
+}
+.cart-empty {
+    padding: 30px;
+    font-size: 30px;
+}
+.fill-up-link {
+    padding: 30px;
+    font-size: 30px; 
+    text-decoration: underline;
+}
