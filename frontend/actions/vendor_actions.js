@@ -34,8 +34,6 @@ export const updateVendor = vendor => dispatch => (
 export const createVendor = vendor => dispatch => (
     VendorApiUtil.createVendor(vendor).then(vendor => (
         dispatch(receiveVendor(vendor))
-    ), err => (
-        dispatch(receiveVendorErrors(err.responseJSON))
     ))
 );
 

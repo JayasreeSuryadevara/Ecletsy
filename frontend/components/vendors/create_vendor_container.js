@@ -5,10 +5,8 @@ import { createVendor } from '../../actions/vendor_actions';
 
 const mapStateToProps = state => {
     const currentUser = state.entities.users[state.session.id]
-    const errors = state.errors.vendor;
     return {
         currentUser,
-        errors
     };
 }
 

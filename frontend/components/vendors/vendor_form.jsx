@@ -14,26 +14,35 @@ class VendorForm extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        console.log("state in vendor form", this.state);
-        const vendor = Object.assign({}, this.state);
-        console.log("vendor in vendor form", vendor);
-        this.props.createVendor(vendor).then(payload => {
-            this.props.history.push(`/vendors/${vendor.id}`)
-        })
+        const formData = new FormData();
+
+        formData.append('vendor[vendor_name]', this.state.vendor_name);
+        formData.append('vendor[owner_id]', this.state.owner_id);
+
+        if (this.state.imageFile) {
+            formData.append('vendor[photo]', this.state.imageFile);
+        }
+
+        this.props.createVendor(formData).then(payload => {
+            const { vendor } = payload;
+            this.props.history.push(`/vendors/${vendor.id}`);
+        })       
     }
 
     update(field) {
         return (e) => this.setState({ [field]: e.currentTarget.value });
     }
 
-    handleFile(event) {
-        const file = event.currentTarget.files[0];
-        const fileReader = new FileReader();
-        fileReader.onloadend = () => {
-            this.setState({ imageFile: file, image_url: fileReader.result });
-        }
+    handleFile(e) {
+        const reader = new FileReader();
+        const file = e.currentTarget.files[0];
+        reader.onloadend = () =>
+            this.setState({ imageUrl: reader.result, imageFile: file });
+
         if (file) {
-            fileReader.readAsDataURL(file);
+            reader.readAsDataURL(file);
+        } else {
+            this.setState({ imageUrl: "", imageFile: null });
         }
     }
 
@@ -42,23 +51,17 @@ class VendorForm extends React.Component {
         //     ? <img src={this.state.image_url} />
         //     : null;
 
-        let { errors } = this.props;
 
         return (
             <div className="vendor-form-container">
                 <form onSubmit={this.handleSubmit} className="vendor-form">
 
-                    <div className="vendor-errors">
-                        {errors}
-                    </div>
-
                     <div className="vendor-name">
                         <h2> Create your own store</h2>
-                        <label htmlFor="name">
+                        <label>
                             Name your Store
                         </label>
                         <br />
-
                         <div className="vendor-name-input">
                             <input
                                 required
@@ -66,19 +69,16 @@ class VendorForm extends React.Component {
                                 value={this.state.vendor_name}
                                 onChange={this.update('vendor_name')} />
                         </div>
-
                     </div>
                     <br />
-                    {/* <div className="vendor-image-upload">
-                        <label htmlFor="vendor-image">Add your Store's logo here</label>
+                    <div className="vendor-image-upload">
+                        <label htmlFor="vendor-image">Add your Store's Image here</label>
                         <br />
-
                         <div className="image-preview">
                             {preview}
                         </div>
-
                         <input type="file" id="vendor-image" onChange={this.handleFile} />
-                    </div> */}
+                    </div>
 
                     <input type="submit" className="vendor-create-btn" value="Save and continue" />
                 </form>

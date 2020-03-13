@@ -7,8 +7,6 @@ import { fetchAllUsers } from '../../actions/user_actions';
 const mapStateToProps = (state, ownProps) => {
     const currentUser = state.entities.users[state.session.id];
     const vendor = state.entities.vendors[ownProps.match.params.id];
-    console.log("currentUser in vendor show", currentUser);
-    console.log("vendor in vendor show", vendor);
     return {
         currentUser,
         vendor

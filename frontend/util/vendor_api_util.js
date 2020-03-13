@@ -27,6 +27,8 @@ export const createVendor = (vendor) => {
     return $.ajax({
         method: "POST",
         url: `api/vendors`,
-        data: { vendor }
+        data: formData,
+        contentType: false,
+        processData: false
     });
 }
