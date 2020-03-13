@@ -6,6 +6,7 @@ class HomePage extends React.Component{
         super(props);
         this.state = { isLoaded: false }
         this.homepageBanner = this.homepageBanner.bind(this);
+        this.footerBanner = this.footerBanner.bind(this);
     }
 
     componentDidMount() {
@@ -83,16 +84,49 @@ class HomePage extends React.Component{
         );
     }
 
+    footerBanner(){
+        return (
+            <div className="about-ecletsy-footer">
+                <div className="about-box">
+                    <div className="what-is-ecletsy">
+                        What is Ecletsy?
+                    </div>
+                    <div className="about-parts">
+                        <div className="about-div-1">
+                            <h3>A one-of-a-kind community</h3>
+                            <p>Ecletsy is a global online marketplace, where people come together to make, sell, buy, and collect unique items.</p>
+                        </div>
+                        <div className="about-div-2">
+                            <h3>Support independent creators</h3>
+                            <p>There’s no Ecletsy warehouse – just millions of people selling the things they love. We make the whole process easy, helping you connect directly with makers to find something extraordinary.</p>
+                        </div>
+                        <div className="about-div-3">
+                            <h3>Peace of mind</h3>
+                            <p>Your privacy is the highest priority of our dedicated team. And if you ever need assistance, we are always ready to step in for support.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="wave-box">
+                    <p> United States   |   English (US)   |   $ (USD) </p>
+                    <p>© 2020 Ecletsy, Inc.  Terms of Use  Privacy  Interest-based ads</p>
+                </div>
+            </div>
+        );
+    }
+
     render(){
 
         return (
-            <div>
+            <div className="hmpg">
                 <div>{this.homepageBanner()}</div>
-                <div>
+                <br />
+                <div className="product-index">
                     {this.state.isLoaded ? 
                         <ProductIndexContainer products={this.props.products} /> : null
                     }
                 </div>
+                <br />
+                <div>{this.footerBanner()}</div>
             </div>
         );
     }
