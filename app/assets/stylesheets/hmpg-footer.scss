@@ -37,15 +37,25 @@
     box-sizing: border-box;
     width: 1402 !important;
     height: 100px;
+    padding-top: 5px;
     background-color: rgb(27, 27, 61);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     color: whitesmoke;
     p {
-        padding-left: 18px;
-        padding-right: 18px;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
     }
+    div {
+        padding: 10px;
+    }
+}
+a:link {
+    color: whitesmoke;
+    padding-left: 20px;
+    text-align: center;
 }
 .hmpg {
     display: flex;

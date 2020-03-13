@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductIndexContainer from '../products/product_index_container';
+import { Link } from 'react-router-dom';
 
 class HomePage extends React.Component{
     constructor(props){
@@ -107,8 +108,11 @@ class HomePage extends React.Component{
                     </div>
                 </div>
                 <div className="wave-box">
-                    <p> United States   |   English (US)   |   $ (USD) </p>
-                    <p>© 2020 Ecletsy, Inc.  Terms of Use  Privacy  Interest-based ads</p>
+                    <p> Created by Jayasree Suryadevara </p>
+                    <div>
+                        <Link to="https://github.com/JayasreeSuryadevara/Ecletsy"><i class="fab fa-github fa-3x"></i></Link>
+                        <Link to="https://www.linkedin.com/in/jayasree-suryadevara-98066415/"><i class="fab fa-linkedin fa-3x"></i></Link>
+                    </div>
                 </div>
             </div>
         );
