@@ -32,11 +32,9 @@ class VendorShow extends React.Component {
                 
     render() {
         let { vendor, currentUser } = this.props;
-        console.log("vendor_owner", this.state.vendor_owner);
         if (!vendor) {
             return <div>Loading...</div>;
         }
-        console.log("vendor show", this.props);
         console.log("vendor-show",vendor);
         return (
             <div className="vendor-show-main">
