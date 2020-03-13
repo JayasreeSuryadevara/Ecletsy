@@ -53,4 +53,7 @@ product8.photo.attach(io: File.open("app/assets/images/product8-img.jpg"), filen
 
 # Attaching images to vendor
 vendor1.photo.attach(io: File.open("app/assets/images/home-ideas-hpg-1.jpg"), filename: 'home-ideas-hpg-1.jpg')
+vendor2.photo.attach(io: File.open("app/assets/images/vendor2.jpg"), filename: 'vendor2.jpg')
+vendor3.photo.attach(io: File.open("app/assets/images/vendor3.jpg"), filename: 'vendor3.jpg')
+vendor4.photo.attach(io: File.open("app/assets/images/vendor4.jpg"), filename: 'vendor4.jpg')
 vendor5.photo.attach(io: File.open("app/assets/images/DemoUserShop.jpg"), filename: 'DemoUserShop.jpg')
