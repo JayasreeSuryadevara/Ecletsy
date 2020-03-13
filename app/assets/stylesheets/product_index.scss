@@ -20,6 +20,9 @@
 .product-index-item-info {
     flex-direction: row;
     box-sizing: border-box;
+    div {
+        color: black;
+    }
 }
 .free-shipping-bar {
     font-size: 11px;
