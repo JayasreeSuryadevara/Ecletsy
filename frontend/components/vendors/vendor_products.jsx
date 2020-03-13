@@ -23,7 +23,7 @@ class VendorProductIndex extends React.Component {
         });
 
         return (
-            <div className="product-index-container">
+            <div className="vendor-product-index-container">
                 <ul className="product-index-ul">
                     {productList}
                 </ul>
