@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { createShoppingCart,fetchShoppingCart } from '../../actions/shopping_cart_actions';
+import { createShoppingCart } from '../../actions/shopping_cart_actions';
 import { createCartItem, updateCartItem } from '../../actions/cart_items_actions';
 import { enableModal } from '../../actions/modal_actions';
 
@@ -94,7 +94,6 @@ const mapDispatchToProps = dispatch => ({
     createShoppingCart: cart => dispatch(createShoppingCart(cart)),
     createCartItem: cartItem => dispatch(createCartItem(cartItem)),
     updateCartItem: cartItem => dispatch(updateCartItem(cartItem)),
-    fetchShoppingCart: user => dispatch(fetchShoppingCart(user)),
     enableModal: (mode) => dispatch(enableModal(mode))
 });
 

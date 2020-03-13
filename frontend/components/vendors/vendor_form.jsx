@@ -47,11 +47,8 @@ class VendorForm extends React.Component {
     }
 
     render() {
-        // const preview = this.state.image_url
-        //     ? <img src={this.state.image_url} />
-        //     : null;
 
-
+        const preview = this.state.imageUrl ? <img src={this.state.imageUrl} /> : null;
         return (
             <div className="vendor-form-container">
                 <form onSubmit={this.handleSubmit} className="vendor-form">

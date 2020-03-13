@@ -23,7 +23,7 @@ export const updateVendor = (vendor) => {
         data: { vendor }
     });
 }
-export const createVendor = (vendor) => {
+export const createVendor = (formData) => {
     return $.ajax({
         method: "POST",
         url: `api/vendors`,
