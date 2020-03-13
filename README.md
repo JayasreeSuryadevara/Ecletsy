@@ -6,7 +6,7 @@ Ecletsy is an attempt to clone online unique product retailer Etsy.
   [Ecletsy](https://ecletsy.herokuapp.com/#/)
   
 ## Screenshot of Ecletsy
-  [Ecletsy](https://github.com/JayasreeSuryadevara/Ecletsy/blob/master/app/assets/images/screenShot.png)
+  [Ecletsy](https://github.com/JayasreeSuryadevara/Ecletsy/blob/master/app/assets/images/Screen%20Shot%202020-03-13%20at%209.52.22%20AM.png)
 
 ## Technologies used
 
