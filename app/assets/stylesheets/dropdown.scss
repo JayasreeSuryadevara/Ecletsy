@@ -21,8 +21,10 @@
     display: none;
     position: absolute;
     height: fit-content;
+    width: 200px;
     min-width: 200px;
     right: 30px;
+    padding-top: 5px;
     border: 1px solid grey;
     border-radius: 5px;
 }
@@ -60,5 +62,11 @@
     align-items: center;
     padding-right: 20px;
     padding-bottom: 20px;
+    font-size: medium;
+}
+.drop-down-fillers {
+    position: relative;
+    padding-top: 10px;
+    text-align: left;
     font-size: medium;
 }

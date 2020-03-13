@@ -75,3 +75,29 @@
     padding: 18px;
     text-align: center;
 }
+.vendor-form-container {
+    display: flex;
+    justify-content: center;
+}
+.vendor-form {
+    width: 600px;
+    padding: 30px;
+    font-size: large;
+    input {
+        min-width: 200px;
+        height: 30px;
+    }
+}
+.vendor-create-btn {
+    background-color: #eee;
+    border-radius: 5px;
+    width: 240px;
+    height: 30px;
+    margin-top: 10px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}

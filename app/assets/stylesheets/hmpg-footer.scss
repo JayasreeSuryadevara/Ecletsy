@@ -1,7 +1,7 @@
 .about-box {
     position: relative;
     box-sizing: border-box;
-    width: 1402 !important;
+    max-width: 1402px !important;
     height: 400px;
     background-color: rgb(231, 182, 118);
     h3 {
@@ -28,7 +28,7 @@
 .what-is-ecletsy {
     text-align: center !important;
     font-size: 30px !important;
-    width: 1402;
+    width: 1402 !important;
     padding-top: 20px;
     padding-bottom: 18px;
 }

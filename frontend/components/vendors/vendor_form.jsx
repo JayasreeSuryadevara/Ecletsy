@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class VendorForm extends React.Component {
     constructor(props) {
@@ -13,15 +14,16 @@ class VendorForm extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
+        console.log("state in vendor form", this.state);
         const vendor = Object.assign({}, this.state);
-        this.props.createVendor(vendor);
-        this.props.history.push(`/vendors/${vendor.id}`);
+        console.log("vendor in vendor form", vendor);
+        this.props.createVendor(vendor).then(payload => {
+            this.props.history.push(`/vendors/${vendor.id}`)
+        })
     }
 
     update(field) {
-        return event => {
-            this.setState({ [field]: event.target.value });
-        };
+        return (e) => this.setState({ [field]: e.currentTarget.value });
     }
 
     handleFile(event) {
@@ -43,7 +45,7 @@ class VendorForm extends React.Component {
         let { errors } = this.props;
 
         return (
-            <div>
+            <div className="vendor-form-container">
                 <form onSubmit={this.handleSubmit} className="vendor-form">
 
                     <div className="vendor-errors">
@@ -51,6 +53,7 @@ class VendorForm extends React.Component {
                     </div>
 
                     <div className="vendor-name">
+                        <h2> Create your own store</h2>
                         <label htmlFor="name">
                             Name your Store
                         </label>
@@ -77,11 +80,11 @@ class VendorForm extends React.Component {
                         <input type="file" id="vendor-image" onChange={this.handleFile} />
                     </div> */}
 
-                    <button className="vendor-create-btn">Save and continue</button>
+                    <input type="submit" className="vendor-create-btn" value="Save and continue" />
                 </form>
             </div>
         )
     }
 }
 
-export default VendorForm;
+export default withRouter(VendorForm);

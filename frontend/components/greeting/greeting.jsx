@@ -35,6 +35,10 @@ const Greeting = ({ currentUser, logout, enableModal }) => {
                         <div className="dropdown-user-name">{currentUser.username}</div>
                     </div>
                 </div>
+                <div className="drop-down-fillers">
+                    <p> Gift card balance is 0.00 </p>
+                    <p> You have no messages </p>
+                </div>
                 <div className="dropdown-create-shop">
                     <Link to="/vendors">Sell your own products</Link>
                 </div>
