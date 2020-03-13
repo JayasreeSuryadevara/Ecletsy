@@ -1,24 +1,30 @@
-# README
+# Ecletsy
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ecletsy is an attempt to clone online unique product retailer Etsy.
+  
+## Link to Ecletsy
+  [Ecletsy](https://ecletsy.herokuapp.com/#/)
+  
+## Screenshot of Ecletsy
+  [Ecletsy](https://github.com/JayasreeSuryadevara/Ecletsy/blob/master/app/assets/images/screenShot.png)
 
-Things you may want to cover:
+## Technologies used
 
-* Ruby version
+* PostgreSQL - used to create the database
+* Ruby on Rails - provided the framework to connect to the database and the front-end components
+* React-Redux - used to create the fronend framework
+* Heroku - To host the code and the database
+* Github - used as the software hosting and management platform
 
-* System dependencies
+## Documents
+  Link to the documentation
+  [Ecletsy Wiki](https://github.com/JayasreeSuryadevara/Ecletsy/wiki)
+  
+## Features  
+* User Authentication
+* Browse through and select Products/ Vendors
+* Create a shop and add/sell your own products
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Does not contain
+* Actual Purchase Features
+* Search/ Review Features
