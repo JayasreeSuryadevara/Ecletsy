@@ -101,7 +101,7 @@ class ProductForm extends React.Component {
                         <br />
                         <input required type="number"
                             min="0.00"
-                            max="1000.00"
+                            max="500.00"
                             step="0.01"
                             value={this.state.price}
                             onChange={this.update('price')}
