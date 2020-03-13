@@ -15,6 +15,7 @@ class ShoppingCartShow extends React.Component {
     
     render(){
         const cartItems = this.props.cartItems;
+        console.log("cart-items", cartItems);
         const currentUser = this.props.currentUser;
         const cartItemsCount = cartItems.length;
         if (cartItemsCount === 0) {
