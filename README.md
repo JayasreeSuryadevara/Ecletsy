@@ -21,10 +21,12 @@ Ecletsy is an attempt to clone online unique product retailer Etsy.
   [Ecletsy Wiki](https://github.com/JayasreeSuryadevara/Ecletsy/wiki)
   
 ## Features  
-* User Authentication
+* User authentication
 * Browse through and select Products/ Vendors
 * Create a shop and add/sell your own products
+* Add products to your cart and see them
+* Search for products using keywords
 
 ## Does not contain
 * Actual Purchase Features
-* Search/ Review Features
+
