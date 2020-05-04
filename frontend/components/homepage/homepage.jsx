@@ -61,21 +61,21 @@ class HomePage extends React.Component{
                 <div className="hmpg-banner-level-3">
                     <div className="hmpg-banner3-part-1">
                         <h3>
-                            <i class="fa fa-check" aria-hidden="true"></i>
+                            <i className="fa fa-check" aria-hidden="true"></i>
                             Unique everything
                         </h3>
                         <p>We have millions of one-of-a-kind items, so you can find whatever you need (or really, really want).</p>
                     </div>
                     <div className="hmpg-banner3-part-1">
                         <h3>
-                            <i class="fa fa-check" aria-hidden="true"></i>
+                            <i className="fa fa-check" aria-hidden="true"></i>
                             Independent sellers
                         </h3>
                         <p>Buy directly from someone who put their heart and soul into making something special.</p>
                     </div>
                     <div className="hmpg-banner3-part-1">
                         <h3>
-                            <i class="fa fa-check" aria-hidden="true"></i>
+                            <i className="fa fa-check" aria-hidden="true"></i>
                             Secure shopping
                         </h3>
                         <p>We use best-in-class technology to protect your transactions.</p>
@@ -110,8 +110,8 @@ class HomePage extends React.Component{
                 <div className="wave-box">
                     <p> Created by Jayasree Suryadevara </p>
                     <div>
-                        <a href="https://github.com/JayasreeSuryadevara/Ecletsy" target="_blank"><i class="fab fa-github fa-3x"></i></a>
-                        <a href="https://www.linkedin.com/in/jayasree-suryadevara-98066415/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+                        <a href="https://github.com/JayasreeSuryadevara/Ecletsy" target="_blank"><i className="fab fa-github fa-3x"></i></a>
+                        <a href="https://www.linkedin.com/in/jayasree-suryadevara-98066415/" target="_blank"><i className="fab fa-linkedin fa-3x"></i></a>
                     </div>
                 </div>
             </div>

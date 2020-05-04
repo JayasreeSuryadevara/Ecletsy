@@ -61,20 +61,20 @@ class CartItem extends React.Component {
                 </form>
                 <div className="cart-item-info-under-divider">
                     <div className="cart-item-div">
-                        <i class="fas fa-truck fa-2x"></i>
+                        <i className="fas fa-truck fa-2x"></i>
                         <p>
                             <b>Nice choice! </b>
                             Enjoy free shipping to the US when you spend $35+ at this shop.
                         </p>
                     </div>
                     <div className="cart-item-div">
-                        <i class="fas fa-cart-arrow-down fa-2x"></i>
+                        <i className="fas fa-cart-arrow-down fa-2x"></i>
                         <p>
                             Other people want this. 3 people have this in their carts right now.
                         </p>
                     </div>
                     <div className="cart-item-div">
-                        <i class="fas fa-hand-paper fa-2x"></i>
+                        <i className="fas fa-hand-paper fa-2x"></i>
                         <h3>
                             Handmade
                         </h3>

@@ -25,14 +25,14 @@ class TopNavBar extends React.Component {
             <div className="logged-bar-container">
 
                 <div className="navbar-store-icon" onClick={this.toVendorOwnerPage}>
-                    <i class="fas fa-store fa-2x"></i>
+                    <i className="fas fa-store fa-2x"></i>
                     <p className="navbar-seller">Seller</p>
                 </div>
 
                 <GreetingContainer />
 
                 <div className="shopping-cart" onClick={this.toShoppingCartPage}>
-                    <i class="fas fa-cart-arrow-down fa-2x"></i>
+                    <i className="fas fa-cart-arrow-down fa-2x"></i>
                 </div>
                 
             </div>
@@ -45,7 +45,7 @@ class TopNavBar extends React.Component {
             <div className="logged-bar-container">
                 <GreetingContainer />
                 <div className="shopping-cart" onClick={this.toShoppingCartPage}>
-                    <i class="fas fa-cart-arrow-down fa-2x"></i>
+                    <i className="fas fa-cart-arrow-down fa-2x"></i>
                 </div>
             </div>
         );

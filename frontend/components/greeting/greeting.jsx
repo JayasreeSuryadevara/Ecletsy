@@ -16,10 +16,10 @@ const Greeting = ({ currentUser, logout, enableModal }) => {
             <button className="dropdown-btn">
 
                 <div className="dropdown-button-profile-pic">
-                    <i class="fas fa-user-circle fa-2x"></i>
+                    <i className="fas fa-user-circle fa-2x"></i>
                 </div>
                 <div className="user-icon-down-arrow">
-                    <i class="fas fa-sort-down fa-2x"></i>
+                    <i className="fas fa-sort-down fa-2x"></i>
                 </div>
 
             </button>
@@ -30,7 +30,7 @@ const Greeting = ({ currentUser, logout, enableModal }) => {
                 <div className="dropdown-header-container">
                     <div className="dropdown-header">
                         <div id="dropdown-profile-pic" className="view-profile-pic-container">
-                            <i class="fas fa-user-circle fa-2x"></i>
+                            <i className="fas fa-user-circle fa-2x"></i>
                         </div>
                         <div className="dropdown-user-name">{currentUser.username}</div>
                     </div>
