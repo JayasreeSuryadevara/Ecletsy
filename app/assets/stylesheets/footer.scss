@@ -2,7 +2,7 @@
     position: relative;
     box-sizing: border-box;
     max-width: 1402px !important;
-    height: 400px;
+    height: 300px;
     background-color: rgb(231, 182, 118);
     h3 {
         font-size: 24px;
@@ -22,7 +22,7 @@
     padding: 18px;
     margin: 10px;
     div {
-        max-width: 340px;
+        max-width: 330px;
     }
 }
 .what-is-ecletsy {
@@ -30,7 +30,6 @@
     font-size: 30px !important;
     width: 1402 !important;
     padding-top: 20px;
-    padding-bottom: 18px;
 }
 .wave-box {
     position: relative;
@@ -49,12 +48,12 @@
         text-align: center;
     }
     div {
-        padding: 10px;
+        padding: 20px;
     }
     a {
         color: whitesmoke !important;
-        padding-left: 20px;
-        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
     }
 }
 .hmpg {

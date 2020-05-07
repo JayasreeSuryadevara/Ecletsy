@@ -8,7 +8,6 @@ class ProductIndex extends React.Component {
 
     render(){
         const products = Object.values(this.props.products);
-        console.log("props in product-index", products);
         const productList = products.map(product => {
             return(
                 <li className='product-index-item' key={`product-${product.id}`}>

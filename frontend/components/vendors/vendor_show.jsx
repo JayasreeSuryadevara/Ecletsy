@@ -43,17 +43,11 @@ class VendorShow extends React.Component {
                         <img src={vendor.image_url} />
                     </div>
                     <div className="vendor-show-info">
-                        <h3> Name </h3>
+                        <h3> Name: {vendor.vendor_name}</h3>
                         <br />
-                        <h3>{vendor.vendor_name}</h3>
-                        <br />
-                        <h3> Owner </h3>
-                        <br />
-                        <h3>{vendor.ownerName}</h3>
+                        <h3> Owner: {vendor.ownerName}</h3>
                         <br />                    
-                        <h3> Email </h3>
-                        <br />
-                        <h3> {vendor.ownerEmail } </h3>
+                        <h3> Email: {vendor.ownerEmail } </h3>
                         <br />
                         <div className="vendor-show-btns">
                             <span>

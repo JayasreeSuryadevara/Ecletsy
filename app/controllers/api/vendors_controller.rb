@@ -2,6 +2,12 @@ class Api::VendorsController < ApplicationController
 
   before_action :require_logged_in, only: [:create, :update]
 
+  def index
+    @vendors = Vendor.all
+    
+    render :index
+  end
+
   def show
     @vendor = Vendor.find(params[:id])
 

@@ -3,6 +3,7 @@ import { Switch, Link, Route } from 'react-router-dom';
  
 import TopNavBarContainer from './navbar/top_navbar_container';
 import BottomNavBar from './navbar/bottom-nav-bar';
+import Footer from './footer/footer';
 import Modal from './modal/modal';
 import HomePageContainer from '../components/homepage/homepage_container';
 import NoMatchPage from '../components/homepage/no_match_page';
@@ -40,6 +41,7 @@ const App = () => (
             <Route exact path="/vendors/:id" component={VendorShowContainer} />
             <Route component={NoMatchPage} />
         </Switch>
+        <Footer />
     </div>
 );
 
