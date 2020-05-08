@@ -18,7 +18,6 @@ const mapStateToProps = (state, ownProps) => {
     } else {
         vendor = { vendor_name: "" }
     }
-    console.log("vendor in ps-c", vendor);  
     return {
         product,
         vendor,

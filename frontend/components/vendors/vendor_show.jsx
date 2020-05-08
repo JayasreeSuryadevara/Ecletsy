@@ -2,7 +2,6 @@ import React from 'react';
 import { getCurrentUserId } from '../../util/helpers_util';
 import { Link } from 'react-router-dom';
 import VendorProductsContainer from './vendor_products';
-import CreateProductContainer from '../products/create_product_container';
 
 class VendorShow extends React.Component {
     constructor(props){
@@ -12,7 +11,6 @@ class VendorShow extends React.Component {
             vendor_owner: false,
             loaded: false
         }
-        // this.handleAddProduct = this.handleAddProduct.bind(this);
     }
 
     componentDidMount() {
@@ -25,10 +23,6 @@ class VendorShow extends React.Component {
                     null
             });
     }
-
-    // handleAddProduct(e) {
-    //     this.state.vendor_owner ? <CreateProductContainer vendorId={vendor.id} /> : null }
-    // }
                 
     render() {
         let { vendor, currentUser } = this.props;

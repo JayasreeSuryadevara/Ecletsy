@@ -34,7 +34,6 @@ class VendorProductIndex extends React.Component {
 
 const mapStateToProps = state => {
     const vendors = Object.values(state.entities.vendors);
-    console.log("vendors in ",vendors)
     const products = vendors[0].products;
 
     return(products);
