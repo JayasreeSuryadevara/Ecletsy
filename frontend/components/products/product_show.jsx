@@ -53,7 +53,23 @@ class ProductShow extends React.Component {
         return (
             <div className="product-show">
                 <div className="product-show-img">
-                    <img src={product.image_url} />     
+                    <img src={product.image_url} /> 
+                    <br />
+                    <div className="product-show-vendor-info">
+                        {this.state.loaded ?
+                            <div className="product-show-vendor-info-box">
+                                <p>Try other products from </p>
+                                <div className="product-show-vendor-link">
+                                    <Link to={`/vendors/${product.vendor_id}`}>{vendor.vendor_name}</Link>
+                                </div>
+                            </div> :
+                            null
+                        }
+                    </div>
+                    <br />
+                    <div>
+                        <Link to="/" className="return-to-home"> Return to Home Page </Link>
+                    </div>    
                 </div>
                 <div className="product-show-info">
                     <div className="product-show-name">
@@ -74,26 +90,6 @@ class ProductShow extends React.Component {
                     <br />
                         {this.props.currentUser ? <CartItem product={product} /> : null} 
                     <br />
-                    <div className="product-show-vendor-info">
-                        { this.state.loaded ? 
-                            <div className="product-show-vendor-info-box">
-                                <p>Try other products from </p>
-                                <div className="product-show-vendor-link">
-                                    <Link to={`/vendors/${product.vendor_id}`}>{vendor.vendor_name}</Link> 
-                                </div>
-                            </div> :
-                            null
-                        }
-                    </div>
-                    <br />
-                    <div>
-                        <Link to="/" className="return-to-home"> Return to Home Page </Link>
-                    </div>
-                    {/* <div "product-show-addCart-btn">
-                            <button className="product-show-cart-btn" onClick={this.props.addToCart}>
-                                Add to Cart
-                            </button>
-                    </div> */}
                 </div>
             </div>
         )
