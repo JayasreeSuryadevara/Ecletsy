@@ -25,7 +25,7 @@ class VendorShow extends React.Component {
     }
                 
     render() {
-        let { vendor, currentUser } = this.props;
+        let { vendor } = this.props;
         if (!vendor) {
             return <div>Loading...</div>;
         }
@@ -56,7 +56,6 @@ class VendorShow extends React.Component {
                 <div>
                     <VendorProductsContainer 
                         products={Object.assign({},vendor.products)} 
-                        vendor_id={vendor.id} 
                     /> 
                 </div>
             </div>
