@@ -102,12 +102,11 @@
     text-align: center;
 }
 .vendor-product-index-container {
-    width: 1402px !important;
-    max-width: 1402px !important;
-    display: block !important;
+    max-width: 1402px;
+    display: block;
     position: relative;
-    float: left;
     clear: both;
     list-style: none;
-    justify-content: space-around !important;
+    justify-content: space-around;
+    margin-bottom: 400px;
 }

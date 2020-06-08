@@ -1,7 +1,7 @@
 import React from 'react';
 import { getCurrentUserId } from '../../util/helpers_util';
 import { Link } from 'react-router-dom';
-import VendorProductsContainer from './vendor_products';
+import VendorProductIndex from './vendor_products';
 
 class VendorShow extends React.Component {
     constructor(props){
@@ -29,7 +29,6 @@ class VendorShow extends React.Component {
         if (!vendor) {
             return <div>Loading...</div>;
         }
-        console.log("vendor-show",vendor);
         return (
             <div className="vendor-show-main">
                 <div className="vendor-show">
@@ -54,7 +53,7 @@ class VendorShow extends React.Component {
                     </div>
                 </div>
                 <div>
-                    <VendorProductsContainer 
+                    <VendorProductIndex 
                         products={Object.assign({},vendor.products)} 
                     /> 
                 </div>

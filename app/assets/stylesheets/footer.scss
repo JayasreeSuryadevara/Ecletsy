@@ -34,7 +34,7 @@
 .wave-box {
     position: relative;
     box-sizing: border-box;
-    width: 1402 !important;
+    max-width: 1402 !important;
     height: 100px;
     padding-top: 5px;
     background-color: rgb(27, 27, 61);

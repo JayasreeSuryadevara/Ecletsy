@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="about-box">
         <div className="what-is-ecletsy">
           What is Ecletsy?
-                    </div>
+        </div>
         <div className="about-parts">
           <div className="about-div-1">
             <h3>A one-of-a-kind community</h3>
