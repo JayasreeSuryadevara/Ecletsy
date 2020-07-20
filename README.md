@@ -12,7 +12,7 @@ Ecletsy is an attempt to clone online unique product retailer Etsy.
 
 * PostgreSQL - used to create the database
 * Ruby on Rails - provided the framework to connect to the database and the front-end components
-* React-Redux - used to create the fronend framework
+* React-Redux - used to create the frontend framework
 * Heroku - To host the code and the database
 * Github - used as the software hosting and management platform
 
