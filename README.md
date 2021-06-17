@@ -1,6 +1,6 @@
 # Ecletsy
 
-Ecletsy is an attempt to clone online unique product retailer Etsy.
+Ecletsy is an attempt to clone online unique product retailer Etsy. Built on Ruby on Rails framework with PostgreSQL, and React on frontend.
   
 ## Link to Ecletsy
   [Ecletsy](https://ecletsy.herokuapp.com/#/)
